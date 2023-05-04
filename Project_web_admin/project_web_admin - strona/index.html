@@ -1,0 +1,57 @@
+import React from 'react'
+
+import projectStyles from '.style.module.css'
+import styles from './index.module.css'
+
+const Index = (props) => {
+  return (
+    <div className={styles['container']}>
+      <div className={styles['container01']}>
+        <img
+          alt="pastedImage"
+          src="/playground_assets/pastedimage-52y-200h.png"
+          className={styles['pasted-image']}
+        />
+      </div>
+      <div className={styles['container02']}>
+        <div className={styles['container03']}>
+          <div className={styles['container04']}>
+            <div className={styles['container05']}>
+              <div className={styles['container06']}>
+                <span>Panel boczny</span>
+              </div>
+              <div className={styles['container07']}>
+                <div className={styles['container08']}>
+                  <form className={styles['form']}>
+                    <input
+                      type="text"
+                      placeholder="Nazwa użytkownika"
+                      className={` ${styles['textinput']} ${projectStyles['input']} `}
+                    />
+                    <button
+                      className={` ${styles['button']} ${projectStyles['button']} `}
+                    >
+                      Button
+                    </button>
+                    <input
+                      type="text"
+                      name="hasło"
+                      placeholder="hasło"
+                      className={` ${styles['textinput1']} ${projectStyles['input']} `}
+                    />
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div className={styles['container09']}>
+              <span>Panel boczny</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles['container10']}></div>
+    </div>
+  )
+}
+
+export default Index
