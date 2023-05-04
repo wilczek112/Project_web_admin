@@ -1,7 +1,7 @@
 <?php
 $serverName="localhost";
-$user='root';
-$pass ='';
+$user='rootadmin';
+$pass ='testadmin123';
 $db='project_web_admin';
 $con = mysqli_connect($serverName, $user, $pass, $db);
 if(mysqli_connect_errno()){
