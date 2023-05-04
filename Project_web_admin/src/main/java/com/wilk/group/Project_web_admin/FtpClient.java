@@ -1,6 +1,11 @@
 package com.wilk.group.Project_web_admin;
 
+import org.apache.commons.net.PrintCommandListener;
+import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPReply;
+
 import java.io.IOException;
+import java.io.PrintWriter;
 
 class FtpClient {
 
@@ -9,6 +14,9 @@ class FtpClient {
     private String user;
     private String password;
     private FTPClient ftp;
+
+    public FtpClient(String localhost, int serverControlPort, String user, String password) {
+    }
 
     // constructor
 
