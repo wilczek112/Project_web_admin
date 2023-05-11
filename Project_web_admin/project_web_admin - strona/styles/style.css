@@ -1,0 +1,26 @@
+body{
+	background-color:blueviolet;
+}
+#form{
+	background-color: white;
+	text-align: center;
+	width: 15%;
+	height:18%;
+	margin:120px auto;
+	padding: 20px 50px 50px 50px;
+	box-shadow: 10px 10px 50px rgb(82,11,85);
+	border-radius: 12px;
+}
+#log{
+	color:white;
+	background-color: blueviolet;
+	font-size:large;
+	padding: 10px;
+	border-radius: 12px;
+}
+@media screen and(max-width:700px){
+		#form{
+			width:65%;
+			padding:40px;
+		}
+}
