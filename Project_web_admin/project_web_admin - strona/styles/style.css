@@ -1,26 +1,106 @@
-body{
-	background-color:blueviolet;
+
+
+:root{
+	--main-color:#41ac10;
+	--black:#222;
+	--white:#fff;
+	--light-black:#777;
+	--light-white:#fff9;
+	--dark-bg:rgba(0,0,0,.7);
+	--light-bg:#eee;
+	--border:.1rem solid var(--black);
+	--box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
 }
-#form{
-	background-color: white;
+
+.naglowek{
+	background-color: var(--black);
+	text-align: center;
+ 
+}
+
+.srodek{
+background-image:  url(https://images2.alphacoders.com/105/1059227.jpg);
+background-size: 100%;
+background-position: center 100%;
+background-repeat: no-repeat;
+	color:var(--black);
+	width: 100%;
+	text-align: center;
+	height: 65%;
+	padding-top: 8%;
+	
+}
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Calibri;
+  }
+.srodek .inputbox input {
+	width: 100%;
+	padding: 0.5rem 0.5rem;
+	font-size: 1.2rem;
+	color: var(--light-black);
+	margin-top: 1.5rem;
+	border: var(--border);
+	font-family: Calibri;
+  }
+.srodek .form span{
+	font-size: 1.5rem;
+}
+.stopka{
+	background-color: var(--black);
+	width: 100%;
+	height: 12%;
+	color:var(--white);
+	position: fixed;
+  right: 1;
+  left: 1;
+  z-index: 1030;
+}
+.stopka h1 {
+	text-align: center;
+	
+	font-size: 1.5rem;
+  }
+.form{
+	background-color: #acacac;
 	text-align: center;
 	width: 15%;
-	height:18%;
-	margin:120px auto;
+	height: 15%;
 	padding: 20px 50px 50px 50px;
-	box-shadow: 10px 10px 50px rgb(82,11,85);
+	margin: auto;
+	box-shadow: 10px 10px 50px rgb(156,124,110);
 	border-radius: 12px;
+	opacity:0.81; 
+	font-family: Calibri;
 }
 #log{
-	color:white;
+	color:var(--white);
 	background-color: blueviolet;
 	font-size:large;
 	padding: 10px;
 	border-radius: 12px;
 }
+.btn{
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color:var(--white);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+	font-family: Calibri;
+}
+.btn:hover{
+    background: var(--light-black);
+
+}
 @media screen and(max-width:700px){
 		#form{
 			width:65%;
+			height: 50%;
 			padding:40px;
 		}
 }
