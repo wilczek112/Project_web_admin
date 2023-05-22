@@ -13,6 +13,7 @@ public class FtpServiceTest {
 
     @Test
     public void test() throws Exception {
+        RouterPanel.getStatus("http://192.168.0.1");
         long currentTimeMillis = System.currentTimeMillis();
         String directoryPath = String.format("/G/create-directory-test-%d", currentTimeMillis);
         String path = String.format("/G/test-upload-file-%d.jpg", currentTimeMillis);

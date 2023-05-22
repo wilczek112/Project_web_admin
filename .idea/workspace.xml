@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="28d6cb5f-ecdd-4fb2-ab9a-cdff5fc43262" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Project_web_admin/src/test/java/com/wilk/group/Project_web_admin/UserRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/project_web_admin - strona/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/project_web_admin - strona/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/FtpService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/ProjectWebAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/ProjectWebAdminApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/test/java/com/wilk/group/Project_web_admin/FtpServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/test/java/com/wilk/group/Project_web_admin/FtpServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Mlylzav9r7k6VzkgIPCKEUi6TJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Admin/OneDrive/Dokumenty/Studia/Semestr 4/Programowanie obiektowe 2/Projekt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "xml.catalog",
+    "spring.configuration.checksum": "cb7dc267afe4baf38c09ed8c311263e0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\OneDrive\Dokumenty\Studia\Semestr 4\Programowanie obiektowe 2\Project_web_admin\lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProjectWebAdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Project_web_admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wilk.group.Project_web_admin.ProjectWebAdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28d6cb5f-ecdd-4fb2-ab9a-cdff5fc43262" name="Changes" comment="" />
+      <created>1678356620889</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678356620889</updated>
+      <workItem from="1678356622700" duration="779000" />
+      <workItem from="1678471806898" duration="90000" />
+      <workItem from="1681375549019" duration="2349000" />
+      <workItem from="1681903953519" duration="48000" />
+      <workItem from="1682582573275" duration="849000" />
+      <workItem from="1682704451897" duration="438000" />
+      <workItem from="1683214290679" duration="811000" />
+      <workItem from="1683215135630" duration="59000" />
+      <workItem from="1683222684762" duration="54000" />
+      <workItem from="1684764581121" duration="54000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
