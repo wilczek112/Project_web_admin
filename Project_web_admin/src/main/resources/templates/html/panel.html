@@ -15,6 +15,16 @@
 <h2><a href="panel_admin.html">Panel administracji</a></h2>
 <h1>Godzina</h1>
 <h1>Pogoda</h1>
+<div>
+    <h3>Current Conditions</h3>
+    <p th:text="${currentWeather.description}">Description</p>
+    <h3>Temperature</h3>
+    <p th:text="${currentWeather.temperature} + ' &#8457;'">Temperature</p>
+    <h3>Feels Like</h3>
+    <p th:text="${currentWeather.feelsLike} + ' &#8457;'">Feels Like</p>
+    <h3>Wind Speed</h3>
+    <p th:text="${currentWeather.windSpeed} + ' mph'"></p>
+</div>
 <h2>Status serwer 1</h2>
 <h2>Status serwer 2</h2>
 <h2>Status serwer 3</h2>
