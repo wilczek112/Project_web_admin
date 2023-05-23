@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
   <link rel="stylesheet" th:href="@{css/style.css}">
+  <head>
   <section class="naglowek">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
 <div class="header">
   <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
 </div>
   </section>
+  </head>
 
   <section class="srodek">
     <div class="spanel">
@@ -23,11 +26,12 @@
           </div>
           <br>
           <input type="submit" value="zaloguj" class="btn" name="zaloguj">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a type="submit" style="text-decoration:none" th:href="@{/register}" class="btn">Rejestracja</a>
         </form>
-        <a th:href="@{/register}">Rejestracja</a>
     </div>
   </section>
-  
+
 <section class="stopka">
   <div class="dpanel">
 

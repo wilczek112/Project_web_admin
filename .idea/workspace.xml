@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28d6cb5f-ecdd-4fb2-ab9a-cdff5fc43262" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/login_old.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/register.html" afterDir="false" />
-    </list>
+    <list default="true" id="28d6cb5f-ecdd-4fb2-ab9a-cdff5fc43262" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,11 +54,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/OneDrive/Dokumenty/Studia/Semestr 4/Programowanie obiektowe 2/Projekt/Project_web_admin",
+    "last_opened_file_path": "C:/Users/zgred/Desktop/studia/semestr4/Programowanie obiektowe/Project_web_admin/Project_web_admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "cb7dc267afe4baf38c09ed8c311263e0",
     "vue.rearranger.settings.migration": "true"
