@@ -16,8 +16,8 @@ public class MainController {
 
     @RequestMapping(path="/home")
     public String home(){
-        CurrentWeather currentWeather = new CurrentWeather("Clear", BigDecimal.ONE, BigDecimal.ZERO, BigDecimal.TEN);
-        model.addAttribute("currentWeather", currentWeather);
+//        CurrentWeather currentWeather = new CurrentWeather("Clear", BigDecimal.ONE, BigDecimal.ZERO, BigDecimal.TEN);
+//        model.addAttribute("currentWeather", currentWeather);
         return "html/panel";
     }
 }
