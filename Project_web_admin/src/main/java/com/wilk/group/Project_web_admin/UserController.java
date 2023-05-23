@@ -22,17 +22,8 @@ public class UserController {
     private UserRepository userRepository;
     @PostMapping(value = "/saveUser")
     public String saveUser(@Validated @ModelAttribute("user") User newUser, BindingResult errors, Model model) {
-        User newuser = new User();
-//        newuser.setId(2);
-//        newuser.setLogin("testujemy");
-//        newuser.setPassword(newUser.getPassword());
-//        newuser.setEmail(newUser.getEmail());
-//        newuser.setPrivileges("user");
-//        userRepository.save(newuser);
-        System.out.println(newUser.getId());
-        System.out.println(newUser.getLogin());
-        System.out.println(newUser.getPassword());
-        System.out.println(newUser.getEmail());
+        newUser.setPrivileges("user");
+        userRepository.save(newUser);
         return "/html/index";
     }
 }

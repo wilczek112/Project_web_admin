@@ -9,7 +9,8 @@ import lombok.*;
     @Table(name = "users")
     public class User {
         @Id
-        private Integer id;
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
         @Column(name = "login", nullable = false, unique = true, length = 32)
         private String login;
