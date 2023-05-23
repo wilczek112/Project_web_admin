@@ -14,7 +14,7 @@ if(isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany']==true))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lubie placki</title>
-    <link rel="stylesheet" type="text/css" href="../../static/styles/style_others.css?v=6">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style_others.css?v=6">
 </head>
 <body>
 <h1 id="titlecss">LOGOWANIE</h1>

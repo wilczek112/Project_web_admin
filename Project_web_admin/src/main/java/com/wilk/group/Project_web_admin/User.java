@@ -9,16 +9,15 @@ import lombok.*;
     @Table(name = "users")
     public class User {
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
         private Integer id;
 
-        @Column(nullable = false, unique = true, length = 32)
+        @Column(name = "login", nullable = false, unique = true, length = 32)
         private String login;
 
-        @Column(nullable = false, length = 64)
+        @Column(name = "password", nullable = false, length = 64)
         private String password;
 
-        @Column(nullable = false, unique = true, length = 32)
+        @Column(name = "email", nullable = false, unique = true, length = 32)
         private String email;
 
         @Column(name = "privileges", nullable = false, length = 8)

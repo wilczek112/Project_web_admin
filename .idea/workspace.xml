@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="28d6cb5f-ecdd-4fb2-ab9a-cdff5fc43262" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Project_web_admin/src/test/java/com/wilk/group/Project_web_admin/UserRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/project_web_admin - strona/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/project_web_admin - strona/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/FtpService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/ProjectWebAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/ProjectWebAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/test/java/com/wilk/group/Project_web_admin/FtpServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/test/java/com/wilk/group/Project_web_admin/FtpServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/login_old.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2Mlylzav9r7k6VzkgIPCKEUi6TJ" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -62,12 +59,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/OneDrive/Dokumenty/Studia/Semestr 4/Programowanie obiektowe 2/Projekt",
+    "last_opened_file_path": "C:/Users/Admin/OneDrive/Dokumenty/Studia/Semestr 4/Programowanie obiektowe 2/Projekt/Project_web_admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "xml.catalog",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "cb7dc267afe4baf38c09ed8c311263e0",
     "vue.rearranger.settings.migration": "true"
   }
@@ -104,6 +101,7 @@
       <workItem from="1683215135630" duration="59000" />
       <workItem from="1683222684762" duration="54000" />
       <workItem from="1684764581121" duration="54000" />
+      <workItem from="1684790345224" duration="33000" />
     </task>
     <servers />
   </component>
@@ -135,6 +133,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

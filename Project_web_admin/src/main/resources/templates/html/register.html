@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Rejestracja</title>
 </head>
 <body>
-    <form action="addNewUser">
-      E-mail:<br/><input type="text" name="email" /> <br/>
-      Login:<br/><input type="text" name="login" /> <br/>
-      Hasło:<br/><input type="password" name="password" /> <br/>
-      <label>
-        <input type="checkbox" name="regulamin"/> Lubie placki! <br/>
-      </label>
+    <form action="#" th:action="@{/saveUser}" th:object="${user}" method="post">
+        <input name="id" type="hidden" value="on" th:field="*{id}"/>
+        <p>Login: <input type="login" th:field="*{login}" /> </p>
+        <p>Hasło: <input type="password" th:field="*{password}" /></p>
+        <p>E-mail: <input type="text" th:field="*{email}" /> </p>
+<!--      <label>-->
+<!--        <input type="checkbox" name="regulamin"/> Lubie placki! <br/>-->
+<!--      </label>-->
       <input type="submit" value="Zarejestruj się"/>
     </form>
     <p><button>Powrót do streony domowej</button></p>
