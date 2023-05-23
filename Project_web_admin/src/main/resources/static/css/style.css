@@ -53,9 +53,9 @@ html, body {
 	height: 12%;
 	color:var(--white);
 	position: fixed;
-  right: 1;
-  left: 1;
-  z-index: 1030;
+  	right: 1;
+  	left: 1;
+  	z-index: 1030;
 }
 .stopka h1 {
 	text-align: center;
@@ -101,4 +101,22 @@ html, body {
 			height: 50%;
 			padding:40px;
 		}
+}
+
+.testbutton {
+	font-family: arial;
+	color: #F7FDFF;
+	font-size: 12px;
+	text-shadow: 1px 1px 0px #7CACDE;
+	box-shadow: 0px 1px 1px #BEE2F9;
+	padding: 10px 25px;
+	border-radius: 10px;
+	border: 2px solid #3866A3;
+	background: #690613;
+	background: linear-gradient(to top, #690613, #D64045);
+}
+.testbutton:hover {
+	color: #14396A;
+	background: #F71616;
+	background: linear-gradient(to top, #F71616, #D10000);
 }

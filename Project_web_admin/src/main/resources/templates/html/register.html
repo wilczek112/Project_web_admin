@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="pl" xmlns:th="https://www.thymeleaf.org">
+    <link rel="stylesheet" th:href="@{css/style.css}">
 <head>
     <meta charset="UTF-8">
     <title>Rejestracja</title>
 </head>
 <body>
-    <form action="#" th:action="@{/saveUser}" th:object="${user}" method="post">
+<form action="#" th:action="@{/saveUser}" th:object="${user}" method="post">
 
-        <p>Login: <input type="text" th:field="*{login}" /> </p>
-        <p>Hasło: <input type="password" th:field="*{password}" /></p>
-        <p>E-mail: <input type="text" th:field="*{email}" /> </p>
-<!--      <label>-->
-<!--        <input type="checkbox" name="regulamin"/> Lubie placki! <br/>-->
-<!--      </label>-->
-      <input type="submit" value="Zarejestruj się"/>
-    </form>
-
-    <p><button>Powrót do streony domowej</button></p>
+    <p>Login: <input type="text" th:field="*{login}" /> </p>
+    <p>Hasło: <input type="password" th:field="*{password}" /></p>
+    <p>E-mail: <input type="text" th:field="*{email}" /> </p>
+    <!--      <label>-->
+    <!--        <input type="checkbox" name="regulamin"/> Lubie placki! <br/>-->
+    <!--      </label>-->
+    <input class="testbutton" type="submit" value="Zarejestruj się"/>
+</form>
+<br/>
+<a class="testbutton" th:href="@{/index}">Powrót do strony logowania</a>
 </body>
 </html>
