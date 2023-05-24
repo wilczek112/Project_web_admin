@@ -16,19 +16,16 @@ import jakarta.validation.*;
         private Long id;
 
         @Column(name = "login", nullable = false, unique = true, length = 32)
-        @Size(min=3,max=32)
+        @Size(min=3,max=32, message = "Login musi zawierać od 3 do 32 znaków.")
         private String login;
 
         @Column(name = "password", nullable = false, length = 64)
-        //@Size(min=6,max=64)
-        @Pattern(regexp = "((?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_-]).{6,64})", message = "Zjebałeś hasło")
-//        @jakarta.validation.constraints.Pattern(regexp = "((?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_-]).{6,64})"
-//                , message = "Hasło musi się składać z dużych i małych liter oraz zawierać znaki specjalne")
+        @Pattern(regexp = "((?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_-]).{6,64})", message = "Hasło musi składać się z dużych i małych liter, cyfr oraz znaklów specjalnych. Dopuszczalna długość to 6-64 znaków.")
         private String password;
 
         @Column(name = "email", nullable = false, unique = true, length = 32)
-        @NotBlank(message = "Zjebałeś email")
-        @Email(message = "Zjebałeś email")
+        @NotBlank(message = "Pole nie może być puste")
+        @Email(message = "Niepoprawny email")
         private String email;
 
         @Column(name = "privileges", nullable = false, length = 8)

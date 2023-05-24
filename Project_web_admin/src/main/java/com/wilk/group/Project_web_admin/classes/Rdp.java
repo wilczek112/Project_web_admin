@@ -6,8 +6,8 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "server")
-public class Server {
+@Table(name = "rdp")
+public class Rdp {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

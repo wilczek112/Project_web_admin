@@ -12,15 +12,15 @@ public class Router {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false, unique = true, length = 32)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "ip_address", nullable = false, length = 64)
+    @Column(name = "ip_address", nullable = false)
     private String ip_address;
 
-    @Column(name = "login", nullable = false, unique = true, length = 32)
+    @Column(name = "login", nullable = false)
     private String login;
 
-    @Column(name = "password", nullable = false, length = 8)
+    @Column(name = "password", nullable = false)
     private String password;
 }
