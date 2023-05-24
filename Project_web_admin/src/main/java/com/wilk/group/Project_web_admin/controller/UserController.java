@@ -2,6 +2,7 @@ package com.wilk.group.Project_web_admin.controller;
 
 import com.wilk.group.Project_web_admin.repository.UserRepository;
 import com.wilk.group.Project_web_admin.classes.User;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +25,7 @@ public class UserController {
     private UserRepository userRepository;
 
     @PostMapping(value = "/saveUser")
-    public String saveUser(@Validated @ModelAttribute("user") User newUser, BindingResult errors, Model model) {
+    public String saveUser(@Valid @ModelAttribute("user") User newUser, BindingResult errors, Model model) {
         if (errors.hasErrors()) {
             return "html/register";
         }else {
