@@ -6,8 +6,8 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "database")
-public class Database {
+@Table(name = "data_base")
+public class Date_base{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
