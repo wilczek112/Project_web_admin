@@ -19,5 +19,6 @@ public class MainController {
 //        CurrentWeather currentWeather = new CurrentWeather("Clear", BigDecimal.ONE, BigDecimal.ZERO, BigDecimal.TEN);
 //        model.addAttribute("currentWeather", currentWeather);
         return "html/panel";
+
     }
 }
