@@ -13,6 +13,23 @@
 </head>
 <body>
     <h1>Dostępne serwery</h1>
+    <table>
+        <thead>
+        <tr>
+            <th> Adres ip </th>
+            <th> Nazwa </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${servery.isEmpty()}">
+            <td colspan="2"> No Books Available </td>
+        </tr>
+        <tr th:each="server : ${servery}">
+                <td><span th:text="${server.ip_address}"> ip </span></td>
+                <td><span th:text="${server.name}"> name </span></td>
+        </tr>
+        </tbody>
+    </table>
     <h2>*program wyświetla serwery*</h2>
     <p><button>restart</button>&emsp;<button>wyłącz</button>&emsp;<button>wyloguj</button>&emsp;<button>powrót do panelu zarządzania</button></p>
 

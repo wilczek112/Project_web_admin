@@ -23,4 +23,11 @@ public class Server {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "status", nullable = false)
+    private String status;
+
+    @Column(name = "privileges", nullable = false)
+    private int privileges;
+
 }

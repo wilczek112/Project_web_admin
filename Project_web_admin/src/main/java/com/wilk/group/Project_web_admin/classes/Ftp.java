@@ -17,4 +17,7 @@ public class Ftp {
 
     @Column(name = "ftp_path", nullable = false)
     private String ftp_path;
+
+    @Column(name = "status", nullable = false)
+    private String status;
 }
