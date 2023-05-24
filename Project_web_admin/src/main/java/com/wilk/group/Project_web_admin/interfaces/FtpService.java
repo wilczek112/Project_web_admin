@@ -4,12 +4,12 @@ import org.apache.commons.net.ProtocolCommandEvent;
 import org.apache.commons.net.ProtocolCommandListener;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 
-@Service
+
 public class FtpService {
     public FTPClient loginFtp(String host, int port, String username, String password) throws Exception {
         FTPClient ftpClient = new FTPClient();
