@@ -14,12 +14,8 @@
 .naglowek{
 	background-color: var(--black);
 	text-align: center;
-  width:100%;
-  height: 11%;
+ 
 }
-.centerrouter{
-  margin-left: 14.35%;
-  }
 
 .srodek{
 background-image:  url(https://images2.alphacoders.com/105/1059227.jpg);
@@ -28,6 +24,7 @@ background-position: center 100%;
 background-repeat: no-repeat;
 	color:var(--black);
 	width: 100%;
+	text-align: center;
 	height: 65%;
 	padding-top: 8%;
 	
@@ -77,49 +74,6 @@ html, body {
 	opacity:0.81; 
 	font-family: Calibri;
 }
-.container{
-display: flex;
-}
-.llpanel {
-  background-color: #acacac;
-  text-align: center;
-  width: 25%;
-  height: 50%;
-  padding: 20px 50px 50px 50px;
-  margin-left: 1rem;
-  box-shadow: 10px 10px 50px rgb(156, 124, 110);
-  border-radius: 12px;
-  opacity: 0.81;
-  font-family: Calibri;
-  float: left;
-}
-.sspanel {
-  background-color: #acacac;
-  text-align: center;
-  width: 12.5%;
-  height: 15%;
-  padding: 20px 50px 50px 50px;
-  margin: 0 auto;
-  box-shadow: 10px 10px 50px rgb(156, 124, 110);
-  border-radius: 12px;
-  opacity: 0.81;
-  font-family: Calibri;
-}
-
-.pppanel {
-  background-color: #acacac;
-  text-align: center;
-  width: 25%;
-  height: 50%;
-  padding: 20px 50px 50px 50px;
-  box-shadow: 10px 10px 50px rgb(156, 124, 110);
-  border-radius: 12px;
-  opacity: 0.81;
-  font-family: Calibri;
-  margin-right: 1rem;
-}
-
-
 #log{
 	color:var(--white);
 	background-color: blueviolet;
@@ -136,18 +90,6 @@ display: flex;
     padding: 0.5rem 1rem;
     cursor: pointer;
 	font-family: Calibri;
-}
-.button1 {
-width: 100px;
-}
-.button2 {
-background: #0a0a0a;
-        border: 2px solid black;
-        border-color: #373737;
-        float: right;
-        margin-right: 1rem;
-        position: relative;
-        top: 1rem;
 }
 .btn:hover{
     background: var(--light-black);
@@ -177,4 +119,42 @@ background: #0a0a0a;
 	color: #14396A;
 	background: #F71616;
 	background: linear-gradient(to top, #F71616, #D10000);
+}
+
+
+.item1{
+	border: 4px solid black;
+	background-color: var(--light-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	height: 550px;
+	width: 450px;
+	margin-right: 20px;
+}
+
+
+.item2{
+	border: 4px solid black;
+	background-color: var(--light-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	height: 550px;
+	width: 650px;
+}
+
+.container1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	height: 1130px;
+	width: auto;
+	padding: 70px;
+	border: 15px white solid;
+	font-size: 30px;
+	background-color: silver;
 }
