@@ -23,4 +23,7 @@ public class Router {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "status", nullable = false)
+    private String status;
 }
