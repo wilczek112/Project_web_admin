@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" th:href="@{css/style.css?ver=4.15}">
+<link rel="stylesheet" th:href="@{css/style.css}">
 <head>
     <section class="naglowek">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -9,42 +9,19 @@
             <title>panel zarzadzania</title>
             <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
         </div>
-        <header>
-            <nav class="logInf">
-                <h3>Zalogowany użytkownik:admin z uprawnieniami administrator</h3>
-            </nav>
-        </header>
     </section>
 </head>
-<body class="">
-
-<div class="container1">
-    <div class="title">
-        <h1>PANEL GŁÓWNY</h1>
-    </div>
-    <br>
-    <section class="item1">
-    <div class="panel1">
-        <h1 class="">Dostępne funkcje</h1>
-    <h2>FTP</h2>
-    <br>
-    <h2>Dostępne serwery</h2>
-        <br>
-        <h2>Dostępne pulpity zdalne </h2>
-    <br>
-        <h2>Dostępne routery</h2>
-    <br>
-    <a href="localhost/phpmyadmin">Zarządzanie bazą danych</a>
-        <a href="panel_admin.html">Panel administracji</a>
-    </div>
-</section>
-<br>
-<section class="item2">
-    <div class="">
-        <h1>Godzina</h1>
-        <br>
-        <h1>Pogoda</h1>
-    </div>
+<body>
+<h3>Zalogowany użytkownik:admin z uprawnieniami administrator</h3>
+<h1>Dostępne funkcje</h1>
+<h2>FTP</h2>
+<h2>Dostępne serwery</h2>
+<h2>Dostępne pulpity zdalne</h2>
+<h2>Dostępne routery</h2>
+<h2><a href="localhost/phpmyadmin">Zarządzanie bazą danych</a></h2>
+<h2><a href="panel_admin.html">Panel administracji</a></h2>
+<h1>Godzina</h1>
+<h1>Pogoda</h1>
 <!--<div>-->
 <!--    <h3>Current Conditions</h3>-->
 <!--    <p th:text="${currentWeather.description}">Description</p>-->
@@ -55,17 +32,10 @@
 <!--    <h3>Wind Speed</h3>-->
 <!--    <p th:text="${currentWeather.windSpeed} + ' mph'"></p>-->
 <!--</div>-->
-    <div>
-        <h2>Status serwer 1</h2>
-        <br>
-        <h2>Status serwer 2</h2>
-        <br>
-        <h2>Status serwer 3</h2>
-        <br>
-        <h2>Adres IP serwera</h2>
-    </div>
-</section>
-</div>
+<h2>Status serwer 1</h2>
+<h2>Status serwer 2</h2>
+<h2>Status serwer 3</h2>
+<h2>Adres IP serwera</h2>
 <p><button>wyloguj</button>&emsp;<button>restart serwera</button></p>
 </body>
 <section class="stopka">

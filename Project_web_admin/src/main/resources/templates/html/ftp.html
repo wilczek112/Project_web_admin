@@ -6,15 +6,8 @@
 </head>
 <body>
     <div>Dostępne pliki na stronie:</div>
-    <tbody>
-<!--    <tr th:if="${ffd.isEmpty()}">-->
-<!--        <td colspan="2"> No Books Available </td>-->
-<!--    </tr>-->
-    <tr th:each="server : ${ffd}">
-        <td th:if="${ffd.file_type()}=='d'"><span th:text="${ffd.name}"> Folder </span></td>
-        <td th:if="${ffd.file_type()}=='f'"><span th:text="${ffd.name}"> Plik </span></td>
-    </tr>
-    </tbody>
+    <li>Plik 1</li>
+    <li>Plik 2</li>
     <p><button>wyloguj</button>&emsp;<button>powrót do panelu zarządzania</button></p>
 </body>
 </html>
