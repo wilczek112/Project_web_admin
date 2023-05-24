@@ -1,4 +1,4 @@
-package com.wilk.group.Project_web_admin;
+package com.wilk.group.Project_web_admin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

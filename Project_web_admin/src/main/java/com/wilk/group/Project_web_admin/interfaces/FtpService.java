@@ -1,4 +1,4 @@
-package com.wilk.group.Project_web_admin;
+package com.wilk.group.Project_web_admin.interfaces;
 
 import org.apache.commons.net.ProtocolCommandEvent;
 import org.apache.commons.net.ProtocolCommandListener;

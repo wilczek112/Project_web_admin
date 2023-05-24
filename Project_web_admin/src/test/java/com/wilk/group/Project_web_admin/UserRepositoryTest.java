@@ -1,5 +1,7 @@
 package com.wilk.group.Project_web_admin;
 
+import com.wilk.group.Project_web_admin.classes.User;
+import com.wilk.group.Project_web_admin.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;

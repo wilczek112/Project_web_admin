@@ -1,5 +1,7 @@
-package com.wilk.group.Project_web_admin;
+package com.wilk.group.Project_web_admin.controller;
 
+import com.wilk.group.Project_web_admin.repository.UserRepository;
+import com.wilk.group.Project_web_admin.classes.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,7 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class UserController {

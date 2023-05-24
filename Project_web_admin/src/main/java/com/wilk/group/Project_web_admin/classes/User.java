@@ -1,4 +1,4 @@
-package com.wilk.group.Project_web_admin;
+package com.wilk.group.Project_web_admin.classes;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,22 +15,21 @@ import jakarta.validation.*;
         private Long id;
 
         @Column(name = "login", nullable = false, unique = true, length = 32)
-        @jakarta.validation.constraints.Size(min=5, max = 15,  message = "Login musi zajmować od 5 do 15 znaków")
-        @jakarta.validation.constraints.NotEmpty(message = "Musisz wpisac swój login")
+        @jakarta.validation.constraints.NotBlank(message = "Musisz wpisac swój login")
+        @jakarta.validation.constraints.Size(min=3, max = 32,  message = "Login musi zajmować od 5 do 15 znaków")
         private String login;
 
         @Column(name = "password", nullable = false, length = 64)
-        @jakarta.validation.constraints.Pattern(regexp = "((?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%]).{6,20})",
-                message = "Hasło jest błędne")
-        @jakarta.validation.constraints.NotEmpty(message = "Hasło jest wymagane")
+        @jakarta.validation.constraints.NotBlank(message = "Hasło jest wymagane")
+        @jakarta.validation.constraints.Pattern(regexp = "((?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_-]).{6,64})"
+                , message = "Hasło musi się składać z dużych i małych liter oraz zawierać znaki specjalne")
         private String password;
 
         @Column(name = "email", nullable = false, unique = true, length = 32)
-        @jakarta.validation.constraints.NotEmpty(message = "Musisz podać swój email")
+        @jakarta.validation.constraints.NotBlank(message = "Musisz podać swój email")
         @jakarta.validation.constraints.Email(message = "Email został źle wprowadzony")
         private String email;
 
         @Column(name = "privileges", nullable = false, length = 8)
-        @jakarta.validation.constraints.NotEmpty
         private String privileges;
     }

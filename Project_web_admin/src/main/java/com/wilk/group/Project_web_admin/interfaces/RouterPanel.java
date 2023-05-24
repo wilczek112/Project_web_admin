@@ -1,4 +1,4 @@
-package com.wilk.group.Project_web_admin;
+package com.wilk.group.Project_web_admin.interfaces;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
