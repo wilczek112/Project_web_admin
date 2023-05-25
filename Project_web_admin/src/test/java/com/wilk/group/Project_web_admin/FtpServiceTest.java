@@ -1,6 +1,5 @@
 package com.wilk.group.Project_web_admin;
 
-import com.wilk.group.Project_web_admin.interfaces.FtpService;
 import com.wilk.group.Project_web_admin.interfaces.RouterPanel;
 import org.apache.commons.net.ftp.FTPClient;
 import org.junit.jupiter.api.Test;
