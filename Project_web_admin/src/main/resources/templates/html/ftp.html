@@ -6,8 +6,16 @@
 </head>
 <body>
     <div>Dostępne pliki na stronie:</div>
-    <li>Plik 1</li>
-    <li>Plik 2</li>
+    <tbody>
+    <!--    <tr th:if="${ffd.isEmpty()}">-->
+    <!--        <td colspan="2"> No Books Available </td>-->
+    <!--    </tr>-->
+    <tr th:each="ftp_file_database : ${files_database}">
+        <td th:if="${ftp_file_database.file_type()}=='directory'"><span th:text="${ftp_file_database.name}"> Folder </span></td>
+        <td th:if="${ftp_file_database.file_type()}=='file'"><span th:text="${ftp_file_database.name}"> Plik </span></td>
+        <td><span th:text="${ftp_file_database.name}"> Plik </span></td>
+    </tr>
+    </tbody>
     <p><button>wyloguj</button>&emsp;<button>powrót do panelu zarządzania</button></p>
 </body>
 </html>

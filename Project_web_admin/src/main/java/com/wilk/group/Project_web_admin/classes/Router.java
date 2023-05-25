@@ -26,4 +26,8 @@ public class Router {
 
     @Column(name = "status", nullable = false)
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name="privileges")
+    private Privileges privileges;
 }

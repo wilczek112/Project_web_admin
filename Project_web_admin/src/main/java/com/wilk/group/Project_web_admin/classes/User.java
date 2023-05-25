@@ -28,6 +28,11 @@ import jakarta.validation.*;
         @Email(message = "Niepoprawny email")
         private String email;
 
-        @Column(name = "privileges", nullable = false, length = 8)
-        private String privileges;
+        @OneToOne
+        @JoinColumn(name="ftp_id")
+        private Ftp ftp;
+
+        @ManyToOne
+        @JoinColumn(name="privileges")
+        private Privileges privileges;
     }

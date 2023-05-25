@@ -32,7 +32,7 @@ public class ServerController {
         List<Server> serverUser = new ArrayList<>();
         for(int i=0;i<servers.size();i++){
             System.out.println(servers.get(i).getPrivileges());
-            if(servers.get(i).getPrivileges()==2) serverUser.add(servers.get(i));
+            //if(servers.get(i).getPrivileges()==2) serverUser.add(servers.get(i));
         }
         int who=1;
         if(who==0) model.addAttribute("servery",servers);

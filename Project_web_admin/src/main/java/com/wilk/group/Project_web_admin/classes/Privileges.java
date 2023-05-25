@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -13,9 +15,19 @@ public class Privileges {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     @Column(name = "privileges", nullable = false)
     private String privileges;
 
     @Column(name = "privileges_int", nullable = false)
     private String privileges_int;
+
+    @OneToMany
+    private List<User> users;
+
+    @OneToMany
+    private List<Router> routers;
+
+    @OneToMany
+    private List<Server> servers;
 }

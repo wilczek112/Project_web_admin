@@ -27,7 +27,7 @@ public class UserController {
         if (errors.hasErrors()) {
             return "html/register";
         }else {
-            newUser.setPrivileges("user");
+            //newUser.setPrivileges(2);
             userRepository.save(newUser);
             return "/html/index";
         }

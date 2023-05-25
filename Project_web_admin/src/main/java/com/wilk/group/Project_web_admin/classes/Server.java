@@ -27,7 +27,7 @@ public class Server {
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "privileges", nullable = false)
-    private int privileges;
-
+    @ManyToOne
+    @JoinColumn(name="privileges")
+    private Privileges privileges;
 }
