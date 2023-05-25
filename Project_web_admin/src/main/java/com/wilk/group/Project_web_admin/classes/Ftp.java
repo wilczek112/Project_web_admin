@@ -18,7 +18,7 @@ public class Ftp {
     @Column(name = "status", nullable = false)
     private String status;
 
-    @OneToOne(mappedBy = "ftp")
+    @OneToOne(mappedBy = "ftp",cascade = CascadeType.ALL)
     private User user;
 
     public void setFtp(String path){

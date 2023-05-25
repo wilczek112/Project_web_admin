@@ -16,17 +16,9 @@ public class ServerController {
     @Autowired
     private ServerRepository serverRepository;
     
-    
-    @RequestMapping(path="/servers")
-    public String servers(){
-        return "html/serwer";
-    }
 
 
-
-
-
-    @GetMapping(path = "/getServers")
+    @GetMapping(path = "/servers")
     public String getServers(Model model){
         List<Server> servers = serverRepository.findAll();
         List<Server> serverUser = new ArrayList<>();

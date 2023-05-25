@@ -25,10 +25,10 @@ public class Privileges {
     @OneToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
     private List<User> users;
 
-    @OneToMany
+    @OneToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
     private List<Router> routers;
 
-    @OneToMany
+    @OneToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
     private List<Server> servers;
 
     public void addAdmin(){
