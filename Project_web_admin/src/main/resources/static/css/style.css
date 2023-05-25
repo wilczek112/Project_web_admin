@@ -29,9 +29,10 @@ background-repeat: no-repeat;
 	color:var(--black);
 	width: 100%;
 	height: 65%;
-	padding-top: 8%;
-	
+	padding-top: 5%;
+	padding-bottom: 3%;
 }
+
 html, body {
 	height: 100%;
 	margin: 0;
@@ -79,6 +80,58 @@ html, body {
 }
 .container{
 display: flex;
+}
+.inner {
+  background-color: #acacac;
+  text-align: center;
+  width: 92.5%;
+  height: 90%;
+  margin: 0 auto;
+  box-shadow: 10px 10px 50px rgb(156, 124, 110);
+  border-radius: 12px;
+  opacity: 0.81;
+  font-family: Calibri;
+  border: 2px solid black;
+  border-color: #373737;
+}
+.lewypanelhome {
+  text-align: center;
+  width: 30%;
+  height: 86%;
+  padding: 20px 50px;
+  font-family: Calibri;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+  float: left;
+}
+
+.prawypanelhome {
+  text-align: center;
+  width: 50%;
+  height: 86%;
+  padding: 20px 50px;
+  font-family: Calibri;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid black;
+  float: right;
+}
+.zalogowany {
+  position: absolute;
+  top: 2rem;
+  transform: translateY(-50%);
+  right: 8rem;
+  color: var(--white);
+}
+.godzina{
+position: absolute;
+  top: 2rem;
+  transform: translateY(-50%);
+  left: 5rem;
+  color: var(--white);
 }
 .llpanel {
   background-color: #acacac;
@@ -146,8 +199,17 @@ background: #0a0a0a;
         border-color: #373737;
         float: right;
         margin-right: 1rem;
-        position: relative;
+        position: absolute;
         top: 1rem;
+        right: 1rem;
+}
+.button3{
+right: 7%;
+top: 1rem;
+border: 2px solid black;
+border-color: #373737;
+background: #0a0a0a;
+position: absolute;
 }
 .btn:hover{
     background: var(--light-black);
