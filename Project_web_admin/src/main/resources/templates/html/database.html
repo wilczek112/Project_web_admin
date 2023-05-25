@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{css/style.css}">
 <head>
-    <meta charset="UTF-8">
-    <title>Zarządzanie bazą danych</title>
+    <section class="naglowek">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta charset="UTF-8">
+        <div class="header">
+            <title>routery</title>
+            <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center" >
+            <button class="btn button2">wyloguj</button>
+            <a type="submit" style="text-decoration:none" th:href="@{/panel}" class="btn button3">Panel zarządzania</a>
+            <title>zarządzanie bazą danych</title>
+        </div>
+    </section>
 </head>
 <body>
-<h1>Dostepne bazy danych</h1>
-<h2>*program wyswietla dostępne bazy danych*</h2>
-<p><button class="links" onclick="windows.location.href='https://localhost/phpmyadmin';">zaloguj do bazy danych</button>&emsp;<button>wyloguj</button>&emsp;<button>powrót do panelu zarządzania</button></p>
+<section class="srodek">
+    <section class="container">
+
+
+        <div class="llpanel">
+            <h1>Dostepne bazy danych</h1>
+        </div>
+        <div class="sspanel">
+            <h2>
+                Panel wyboru
+            </h2>
+            <button class="btn button1">połącz z bazą danych</button>
+            <button class="btn" onclick="windows.location.href='https://localhost/phpmyadmin';">zaloguj do bazy danych</button>
+
+        </div>
+
+        <div class="pppanel">
+            <h1>Dostepne bazy danych</h1>
+        </div>
+    </section>
+</section>
 </body>
+<section class="stopka">
+    <div class="dpanel">
+
+        <h1>@Lubie_placki_2023</h1>
+
+    </div>
+</section>
 </html>
