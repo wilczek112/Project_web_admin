@@ -20,9 +20,9 @@ public class Privileges {
     private String privileges;
 
     @Column(name = "privileges_int", nullable = false)
-    private String privileges_int;
+    private int privileges_int;
 
-    @OneToMany
+    @OneToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
     private List<User> users;
 
     @OneToMany
@@ -30,4 +30,15 @@ public class Privileges {
 
     @OneToMany
     private List<Server> servers;
+
+    public void addAdmin(){
+        this.id= 1L;
+        this.privileges="admin";
+        this.privileges_int=1;
+    }
+    public void addUser(){
+        this.id= 2L;
+        this.privileges="user";
+        this.privileges_int=2;
+    }
 }

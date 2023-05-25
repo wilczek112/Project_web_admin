@@ -1,4 +1,4 @@
-package com.wilk.group.Project_web_admin.interfaces;
+package com.wilk.group.Project_web_admin.controller;
 
 
 import com.wilk.group.Project_web_admin.classes.Server;
@@ -13,9 +13,9 @@ import java.util.List;
 @Controller
 public class MainPanel {
 
-    @RequestMapping(path = "/main")
-    public String serwer_model(Model model){
-                //model.addAttribute("server", serverRepository.findAll());
-        return null;
-    }
+//    @RequestMapping(path = "/panel")
+//    public String serwer_model(Model model){
+//                //model.addAttribute("server", serverRepository.findAll());
+//        return null;
+//    }
 }

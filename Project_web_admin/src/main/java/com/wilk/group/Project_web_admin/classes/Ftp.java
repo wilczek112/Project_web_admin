@@ -20,4 +20,9 @@ public class Ftp {
 
     @OneToOne(mappedBy = "ftp")
     private User user;
+
+    public void setFtp(String path){
+        this.ftp_path=path;
+        this.status="notSet";
+    }
 }

@@ -1,5 +1,6 @@
 package com.wilk.group.Project_web_admin;
 
+import com.wilk.group.Project_web_admin.classes.Privileges;
 import com.wilk.group.Project_web_admin.classes.User;
 import com.wilk.group.Project_web_admin.repository.UserRepository;
 import org.junit.jupiter.api.Test;
@@ -21,13 +22,14 @@ public class UserRepositoryTest{
 
     @Autowired
     private UserRepository repo;
+    Privileges privileges = new Privileges();
     @Test
     public void testCreateUser() {
-        User user = new User();
+        privileges.addUser();
+        User user = new User(privileges);
         user.setLogin("user");
         user.setPassword("user");
         user.setEmail("null@test.pl");
-        user.setPrivileges("user");
 
         User savedUser = repo.save(user);
 

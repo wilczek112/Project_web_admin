@@ -14,13 +14,16 @@ public class MainController {
         return "html/index";
     }
 
-    @RequestMapping(path="/home")
+    @RequestMapping(path="/panel")
     public String home(){
         return "html/panel";
-
     }
     @RequestMapping(path="/router")
     public String router(){
         return "html/router";
+    }
+    @RequestMapping(path="/database")
+    public String database(){
+        return "html/database";
     }
 }

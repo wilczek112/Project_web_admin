@@ -32,7 +32,12 @@ import jakarta.validation.*;
         @JoinColumn(name="ftp_id")
         private Ftp ftp;
 
-        @ManyToOne
+        @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name="privileges")
         private Privileges privileges;
+
+        public User(Privileges privileges){
+            this.privileges=privileges;
+        }
     }
+
