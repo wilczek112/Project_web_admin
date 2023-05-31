@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         }
         user.setPrivilegesList(Arrays.asList(privileges));
         userRepository.save(user);
-        NewUserFtpDir("/G/Users/"+user.getLogin());
+        //NewUserFtpDir("/G/Users/"+user.getLogin());
     }
 
     @Override
