@@ -1,6 +1,7 @@
 package com.wilk.group.Project_web_admin.classes;
 
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.*;
 import lombok.*;
 

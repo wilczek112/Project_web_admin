@@ -28,8 +28,6 @@ import java.util.List;
         @Column(name = "email", nullable = false, unique = true, length = 32)
         private String email;
 
-        @Column(name = "ftp_path", nullable = false)
-        private String ftp_path;
 
         @ManyToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
         @JoinTable(

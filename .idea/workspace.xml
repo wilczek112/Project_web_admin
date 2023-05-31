@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28d6cb5f-ecdd-4fb2-ab9a-cdff5fc43262" name="Changes" comment="" />
+    <list default="true" id="28d6cb5f-ecdd-4fb2-ab9a-cdff5fc43262" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/classes/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/classes/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/classes/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/classes/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/interfaces/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/interfaces/SpringSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/java/com/wilk/group/Project_web_admin/services/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project_web_admin/src/main/resources/templates/html/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +48,7 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2" />
   <component name="ProjectId" id="2Mlylzav9r7k6VzkgIPCKEUi6TJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,7 +59,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/zgred/Desktop/studia/semestr4/Programowanie obiektowe/Project_web_admin/Project_web_admin"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Admin/OneDrive/Dokumenty/Studia/Semestr 4/Programowanie obiektowe 2/Projekt/Project_web_admin",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -87,6 +99,7 @@
       <workItem from="1684764581121" duration="54000" />
       <workItem from="1684790345224" duration="33000" />
       <workItem from="1684876167927" duration="21000" />
+      <workItem from="1685565703915" duration="10000" />
     </task>
     <servers />
   </component>

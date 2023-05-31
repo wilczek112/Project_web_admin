@@ -32,11 +32,15 @@ public class MainController {
 //            return "redirect:login?success";
 //        }
 //    }
-
-    @RequestMapping(path="/panel")
-    public String home(){
-        return "html/panel";
-    }
+//    @GetMapping("/login")
+//    public String loginForm() {
+//        return "html/panel";
+//    }
+//
+//    @RequestMapping(path="/panel")
+//    public String home(){
+//        return "html/panel";
+//    }
     @RequestMapping(path="/router")
     public String router(){
         return "html/router";

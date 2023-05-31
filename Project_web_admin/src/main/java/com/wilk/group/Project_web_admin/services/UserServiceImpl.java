@@ -36,14 +36,13 @@ public class UserServiceImpl implements UserService {
         user.setEmail(userDto.getEmail());
         // encrypt the password using spring security
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        user.setFtp_path("/G/Users/"+user.getLogin());
         Privileges privileges = privilegesRepository.findByPrivileges("USER");
         if(privileges == null){
             privileges = checkExist("ADMIN");
         }
         user.setPrivilegesList(Arrays.asList(privileges));
         userRepository.save(user);
-        NewUserFtpDir(user.getFtp_path());
+        NewUserFtpDir("/G/Users/"+user.getLogin());
     }
 
     @Override
