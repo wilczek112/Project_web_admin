@@ -1,15 +1,9 @@
 package com.wilk.group.Project_web_admin.controller;
 
-import com.wilk.group.Project_web_admin.classes.Privileges;
-import com.wilk.group.Project_web_admin.classes.Router;
 import com.wilk.group.Project_web_admin.repository.*;
-import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.sql.DataSource;
 
 @Controller
 class DatabaseCleanController{
@@ -24,7 +18,7 @@ class DatabaseCleanController{
     @Autowired
     RdpRepository rdpRepository;
     @Autowired
-    FtpRepository ftpRepository;
+    Ftp_dataRepository ftpRepository;
     @Autowired
     DatabaseRepository databaseRepository;
 

@@ -1,10 +1,9 @@
 package com.wilk.group.Project_web_admin.controller;
 
 
-import com.wilk.group.Project_web_admin.classes.Ftp;
+import com.wilk.group.Project_web_admin.classes.Ftp_data;
 import com.wilk.group.Project_web_admin.classes.Ftp_file_database;
-import com.wilk.group.Project_web_admin.interfaces.FtpService;
-import com.wilk.group.Project_web_admin.repository.FtpRepository;
+import com.wilk.group.Project_web_admin.repository.Ftp_dataRepository;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +19,9 @@ import java.util.List;
 public class FtpController {
 
     @Autowired
-    FtpRepository ftpRepository;
+    Ftp_dataRepository ftp_dataRepository;
 
-    //List<Ftp> ftpki = ftpRepository.findAll();
+    //List<Ftp_data> ftp_dataList = ftp_dataRepository.findAll();
 
     List<Ftp_file_database> ftp_file_database = new ArrayList<>();
 

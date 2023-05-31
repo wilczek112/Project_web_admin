@@ -6,27 +6,19 @@ import lombok.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "routers")
-public class Router {
+@Table(name = "dane_ftp")
+public class Ftp_data {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "ftp_name", nullable = false)
+    private String ftp_name;
 
     @Column(name = "ip_address", nullable = false)
     private String ip_address;
 
-    @Column(name = "login", nullable = false)
-    private String login;
-
-    @Column(name = "password", nullable = false)
-    private String password;
-
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "priveleges_id", nullable = false)
-    private Long priveleges_id;
 }

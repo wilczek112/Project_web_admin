@@ -1,7 +1,6 @@
 package com.wilk.group.Project_web_admin;
 
-import com.wilk.group.Project_web_admin.interfaces.FtpService;
-import com.wilk.group.Project_web_admin.interfaces.RouterPanel;
+import com.wilk.group.Project_web_admin.services.FtpService;
 import org.apache.commons.net.ftp.FTPClient;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +14,13 @@ public class FtpServiceTest {
 
     @Test
     public void test() throws Exception {
-        RouterPanel.getStatus("http://192.168.0.1");
+        //RouterPanel.getStatus("http://192.168.0.1");
         long currentTimeMillis = System.currentTimeMillis();
         String directoryPath = String.format("/G/create-directory-test-%d", currentTimeMillis);
         String path = String.format("/G/test-upload-file-%d.jpg", currentTimeMillis);
         String newPath = String.format("/G/test-rename-file-%d.jpg", currentTimeMillis);
-        FTPClient ftpClient = ftpService.loginFtp("192.168.0.1", 21, "admin", "null");
+        ftpService.ftpSetAll("192.168.0.1", 21, "admin", "null");
+        FTPClient ftpClient = ftpService.loginFtp();
         ftpService.printTreeDir("/G/", ftpClient);
         ftpService.printTreeFiles("/G/", ftpClient);
         ftpService.createDirectory(directoryPath, ftpClient);

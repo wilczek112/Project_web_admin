@@ -25,7 +25,7 @@ public class UserRepositoryTest{
     Privileges privileges = new Privileges();
     @Test
     public void testCreateUser() {
-        privileges.addUser();
+        //privileges.addUser(user);
         User user = new User(privileges);
         user.setLogin("user");
         user.setPassword("user");

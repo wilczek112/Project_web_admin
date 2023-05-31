@@ -13,22 +13,20 @@
 <body>
   <section class="srodek">
     <div class="spanel">
-        <form action="#" th:action="@{/panel}" method="post" class="form">
-          <div class="inputbox">
-            <span>Login: </span>
-            <input type="text" placeholder="Login" name="login">
-            
-          </div>
-          <div class="inputbox">
-            <br>
-            <span>Haslo: </span>
-            <input type="text" placeholder="Haslo" name="haslo">
-          </div>
-          <br>
-          <input type="submit" value="zaloguj" class="btn" name="zaloguj">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <a type="submit" style="text-decoration:none" th:href="@{/register}" class="btn">Rejestracja</a>
-        </form>
+      <form action="#" th:action="@{/login}" th:object="${user}" method="post" class="form">
+        <div class="inputbox">
+          <span>Login:</span>
+          <input type="text" placeholder="Login" th:field="*{login}" />
+          <div class="alert" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>
+        </div>
+        <div class="inputbox">
+          <span>Hasło: </span>
+          <input type="password" placeholder="Haslo" th:field="*{password}" />
+          <div class="alert" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+        </div>
+        <input class="btn" type="submit" value="zaloguj"/>
+        <a type="submit" style="text-decoration:none" th:href="@{/register}" class="btn">Rejestracja</a>
+      </form>
     </div>
   </section>
 </body>

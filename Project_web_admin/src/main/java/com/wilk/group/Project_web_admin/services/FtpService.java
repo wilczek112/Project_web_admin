@@ -1,17 +1,30 @@
-package com.wilk.group.Project_web_admin.interfaces;
+package com.wilk.group.Project_web_admin.services;
 
+import lombok.*;
 import org.apache.commons.net.ProtocolCommandEvent;
 import org.apache.commons.net.ProtocolCommandListener;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 
+@Getter
+@Setter
 @Service
 public class FtpService {
-    public FTPClient loginFtp(String host, int port, String username, String password) throws Exception {
+    private String host;
+    private int port;
+    private String username;
+    private String password;
+
+    public FTPClient loginFtp() throws Exception {
+        String host = this.host;
+        int port = this.port;
+        String username = this.username;
+        String password = this.password;
         FTPClient ftpClient = new FTPClient();
         ftpClient.addProtocolCommandListener(new ProtocolCommandListener() {
             @Override
@@ -87,4 +100,11 @@ public class FtpService {
                 System.currentTimeMillis(), path, ftpClient.removeDirectory(path));
         System.out.println();
     }
+    public void ftpSetAll(String host, int port, String username, String password){
+        this.host=host;
+        this.port=port;
+        this.username=username;
+        this.password=password;
+    }
+
 }

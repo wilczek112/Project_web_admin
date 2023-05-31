@@ -25,7 +25,7 @@
         </thead>
         <tbody>
         <tr th:if="${servery.isEmpty()}">
-            <td colspan="2"> Brak serverów :( </td>
+            <td colspan="2"> Brak serwerów :( </td>
         </tr>
         <tr th:each="server : ${servery}">
                 <td><span th:text="${server.ip_address}"> ip </span></td>

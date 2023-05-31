@@ -23,4 +23,7 @@ public class Rdp {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "priveleges_id", nullable = false)
+    private Long priveleges_id;
 }

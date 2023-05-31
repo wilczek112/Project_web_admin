@@ -1,20 +1,25 @@
 package com.wilk.group.Project_web_admin.classes;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Set;
 
-@Getter
-@Setter
+
 @Entity
 @Table(name = "privileges")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Privileges {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     @Column(name = "privileges", nullable = false)
     private String privileges;
@@ -22,23 +27,6 @@ public class Privileges {
     @Column(name = "privileges_int", nullable = false)
     private int privileges_int;
 
-    @OneToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "privilegesList")
     private List<User> users;
-
-    @OneToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
-    private List<Router> routers;
-
-    @OneToMany(mappedBy = "privileges", cascade = CascadeType.ALL)
-    private List<Server> servers;
-
-    public void addAdmin(){
-        this.id= 1L;
-        this.privileges="admin";
-        this.privileges_int=1;
-    }
-    public void addUser(){
-        this.id= 2L;
-        this.privileges="user";
-        this.privileges_int=2;
-    }
 }

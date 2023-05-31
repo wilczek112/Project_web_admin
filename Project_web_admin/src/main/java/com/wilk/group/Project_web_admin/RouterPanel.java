@@ -1,4 +1,4 @@
-package com.wilk.group.Project_web_admin.interfaces;
+package com.wilk.group.Project_web_admin;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -8,6 +8,11 @@ public class RouterPanel {
     int id;
     String nazwa;
     String url;
+    public RouterPanel(int id, String nazwa, String url){
+        this.id=id;
+        this.nazwa=nazwa;
+        this.url=url;
+    }
     public static String getStatus(String url) throws IOException {
         String result = "";
         int code = 200;
@@ -27,7 +32,7 @@ public class RouterPanel {
         } catch (Exception e) {
             result = "-> Red <-\t" + "Wrong domain - Exception: " + e.getMessage();
         }
-        System.out.println(url + "\t\tStatus:" + result);
+        //System.out.println(url + "\t\tStatus:" + result);
         return result;
     }
 
