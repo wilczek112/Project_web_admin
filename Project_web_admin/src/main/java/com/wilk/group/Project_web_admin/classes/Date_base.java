@@ -27,6 +27,6 @@ public class Date_base{
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "privleges_id", nullable = false)
-    private int priveleges_id;
+    @Column(name = "role", nullable = false)
+    private String role;
 }
