@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     FtpService ftpService;
     public void NewUserFtpDir(String path) throws Exception {
-        ftpService.ftpSetAll("192.168.0.1", 21, "admin", "Testujemy-12345");
+        ftpService.ftpSetAll("192.168.0.1", 21, "admin", "tak12345");
         FTPClient ftpClient = ftpService.loginFtp();
         ftpClient.makeDirectory(path);
     }

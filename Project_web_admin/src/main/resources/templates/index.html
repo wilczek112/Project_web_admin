@@ -1,80 +1,77 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
-  <link rel="stylesheet" th:href="@{css/style.css}">
-  <head>
-  <section class="naglowek">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta charset="UTF-8">
-<div class="header">
-  <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
-</div>
-  </section>
-  </head>
+<link rel="stylesheet" th:href="@{css/style.css}">
+<head>
+    <section class="naglowek">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta charset="UTF-8">
+        <div class="header">
+            <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
+        </div>
+    </section>
+</head>
 <body>
-  <section class="srodek">
+<section class="srodek">
     <div class="spanel">
-<!--      <form action="#" th:action="@{/login}" th:object="${user}" method="post" class="form">-->
-<!--        <div class="inputbox">-->
-<!--          <span>Login:</span>-->
-<!--          <input type="text" placeholder="Login" th:field="*{login}" />-->
-<!--          <div class="alert" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>-->
-<!--        </div>-->
-<!--        <div class="inputbox">-->
-<!--          <span>Hasło: </span>-->
-<!--          <input type="password" placeholder="Haslo" th:field="*{password}" />-->
-<!--          <div class="alert" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>-->
-<!--        </div>-->
-<!--        <input class="btn" type="submit" value="zaloguj"/>-->
-<!--        <a type="submit" style="text-decoration:none" th:href="@{/register}" class="btn">Rejestracja</a>-->
-<!--      </form>-->
-      <div th:if="${param.error}">
-        <div class="alert alert-danger">Błąd</div>
-      </div>
-      <div th:if="${param.logout}">
-        <div class="alert alert-success">You have been logged out.</div>
-      </div>
-      <form
-              method="post"
-              th:action="@{/login}"
-              class="form-horizontal"
-              role="form"
-      >
-        <div class="mb-3">
-          <label for="username" class="control-label">Login *</label>
-          <input type="text"
-                 id="username"
-                 name="username"
-                 class="form-control"
-                 placeholder="Login"
-          />
+        <!--      <form action="#" th:action="@{/login}" th:object="${user}" method="post" class="form">-->
+        <!--        <div class="inputbox">-->
+        <!--          <span>Login:</span>-->
+        <!--          <input type="text" placeholder="Login" th:field="*{login}" />-->
+        <!--          <div class="alert" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>-->
+        <!--        </div>-->
+        <!--        <div class="inputbox">-->
+        <!--          <span>Hasło: </span>-->
+        <!--          <input type="password" placeholder="Haslo" th:field="*{password}" />-->
+        <!--          <div class="alert" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>-->
+        <!--        </div>-->
+        <!--        <input class="btn" type="submit" value="zaloguj"/>-->
+        <!--        <a type="submit" style="text-decoration:none" th:href="@{/register}" class="btn">Rejestracja</a>-->
+        <!--      </form>-->
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">Błąd</div>
         </div>
+        <div th:if="${param.logout}">
+            <div class="alert alert-success">You have been logged out.</div>
+        </div>
+        <form
+                method="post"
+                th:action="@{/login}"
+                class="form"
+                role="form"
+        >
+            <div class="inputbox">
+                <span>Login:</span>
+                <input type="text"
+                       id="username"
+                       name="username"
+                       class="form-control"
+                       placeholder="Login"
+                />
+            </div>
 
-        <div class="mb-3">
-          <label for="password" class="control-label">Password *</label>
-          <input type="password"
-                 id="password"
-                 name="password"
-                 class="form-control"
-                 placeholder="Password"
-          />
-        </div>
+            <div class="inputbox">
+                <span>Hasło: </span>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Password"
+                />
+            </div>
 
-        <div class="mb-3">
-          <button type="submit" class="btn btn-primary">Login</button>
-          <span> Not registered?
-                            <a th:href="@{/register}"> Register/SignUp Here</a>
-                        </span>
-        </div>
-      </form>
+            <button type="submit" class="btn">Login</button>
+            <a th:href="@{/register}" style="text-decoration:none" class="btn" > Rejestracja</a>
+
+        </form>
     </div>
-  </section>
+</section>
 </body>
 <section class="stopka">
-  <div class="dpanel">
+    <div class="dpanel">
 
-    <h1>@Lubie_placki_2023</h1>
+        <h1>@Lubie_placki_2023</h1>
 
-  </div>
+    </div>
 </section>
 </html>
 

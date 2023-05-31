@@ -14,8 +14,7 @@
 <body>
 <section class="srodek">
     <div th:if="${param.success}">
-        <div class="alert alert-info">Pomyślnie zarejestrowane
-            to our app!</div>
+        <div class="alert alert-info">Pomyślnie zarejestrowane !</div>
     </div>
     <div class="spanel">
         <form action="#" th:action="@{/register/saveUser}" th:object="${user}" method="post" class="form">

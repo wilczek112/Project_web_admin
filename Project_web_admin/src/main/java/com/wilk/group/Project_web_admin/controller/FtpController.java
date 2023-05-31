@@ -28,7 +28,7 @@ public class FtpController {
         Ftp_file_database ftp_file_database2 = new Ftp_file_database();
         FTPClient ftpClient = new FTPClient();
         ftpClient.connect("192.168.0.1", 21);
-        ftpClient.login("visit", "Witaj12345678");
+        ftpClient.login("tak", "tak12345");
         long i=0;
         for (FTPFile ftpFile : ftpClient.listFiles("/G/")) {
             if (ftpFile.isDirectory()) {
