@@ -9,6 +9,6 @@ public interface UserService {
     void saveUser(UserDto userDto) throws Exception;
 
     User findUserByLogin(String login);
-
+    User findUserByEmail(String email);
     List<UserDto> findAllUsers();
 }

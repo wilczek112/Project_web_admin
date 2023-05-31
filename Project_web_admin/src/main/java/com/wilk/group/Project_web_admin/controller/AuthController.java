@@ -1,12 +1,15 @@
 package com.wilk.group.Project_web_admin.controller;
 
 
+import com.wilk.group.Project_web_admin.classes.Role;
 import com.wilk.group.Project_web_admin.classes.User;
 import com.wilk.group.Project_web_admin.classes.UserDto;
 import com.wilk.group.Project_web_admin.repository.UserRepository;
 import com.wilk.group.Project_web_admin.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -36,7 +39,12 @@ public class AuthController {
         return "redirect:/panel";
     }
     @RequestMapping("/panel")
-    public String panel(){
+    public String panel(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String currentPrincipalName = authentication.getName();
+        User user = new User();
+        user = userService.findUserByEmail(currentPrincipalName);
+        model.addAttribute("user", user);
         return "panel";
     }
     @GetMapping(path = "/register")
@@ -50,11 +58,11 @@ public class AuthController {
         User testEmail = userRepository.findByEmail(newUser.getEmail());
         if(testLogin != null && testLogin.getLogin() != null && !testLogin.getLogin().isEmpty()){
             errors.rejectValue("login", null,
-                    "There is already an account registered with the same login");
+                    "Istnieje konto o tym samym loginie");
         }
         if(testEmail != null && testEmail.getEmail() != null && !testEmail.getEmail().isEmpty()){
             errors.rejectValue("email", null,
-                    "There is already an account registered with the same email");
+                    "Istnieje konto o tym samym loginie");
         }
         if (errors.hasErrors()) {
             return "register";

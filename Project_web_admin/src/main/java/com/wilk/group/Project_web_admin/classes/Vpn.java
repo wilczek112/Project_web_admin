@@ -27,6 +27,6 @@ public class Vpn {
     @Column(name = "key", nullable = true)
     private String key;
 
-    @Column(name = "priveleges_id", nullable = false)
-    private Long priveleges_id;
+    @Column(name = "role", nullable = false)
+    private String role;
 }

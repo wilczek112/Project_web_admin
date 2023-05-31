@@ -27,6 +27,6 @@ public class Server {
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "priveleges_id", nullable = false)
-    private Long priveleges_id;
+    @Column(name = "role", nullable = false)
+    private String role;
 }
