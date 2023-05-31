@@ -27,6 +27,12 @@
 <!--        <input class="btn" type="submit" value="zaloguj"/>-->
 <!--        <a type="submit" style="text-decoration:none" th:href="@{/register}" class="btn">Rejestracja</a>-->
 <!--      </form>-->
+      <div th:if="${param.error}">
+        <div class="alert alert-danger">Błąd</div>
+      </div>
+      <div th:if="${param.logout}">
+        <div class="alert alert-success">You have been logged out.</div>
+      </div>
       <form
               method="post"
               th:action="@{/login}"
@@ -34,10 +40,10 @@
               role="form"
       >
         <div class="mb-3">
-          <label for="login" class="control-label">Login *</label>
+          <label for="username" class="control-label">Login *</label>
           <input type="text"
-                 id="login"
-                 name="login"
+                 id="username"
+                 name="username"
                  class="form-control"
                  placeholder="Login"
           />

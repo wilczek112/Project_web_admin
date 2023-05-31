@@ -1,9 +1,9 @@
 package com.wilk.group.Project_web_admin.services;
 
 
-import com.wilk.group.Project_web_admin.classes.Privileges;
+import com.wilk.group.Project_web_admin.classes.Role;
 import com.wilk.group.Project_web_admin.classes.User;
-import com.wilk.group.Project_web_admin.repository.PrivilegesRepository;
+import com.wilk.group.Project_web_admin.repository.RoleRepository;
 import com.wilk.group.Project_web_admin.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,8 +21,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
-    private PrivilegesRepository privilegesRepository;
-    private Privileges privileges;
+    private RoleRepository roleRepository;
+    private Role role;
 
     public CustomUserDetailsService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -33,15 +33,15 @@ public class CustomUserDetailsService implements UserDetailsService {
         User user = userRepository.findByLogin(login);
         if (user != null) {
             return new org.springframework.security.core.userdetails.User(user.getEmail(),
-                    user.getPassword(), mapRolesToAuthorities(user.getPrivilegesList()));
+                    user.getPassword(), mapRolesToAuthorities(user.getRoles()));
         }else{
             throw new UsernameNotFoundException("Invalid username or password.");
         }
     }
 
-    private Collection < ? extends GrantedAuthority> mapRolesToAuthorities(Collection <Privileges> privilegesCollection) {
-        Collection < ? extends GrantedAuthority> mapRoles = privilegesCollection.stream()
-                .map(privileges -> new SimpleGrantedAuthority(privileges.getPrivileges()))
+    private Collection < ? extends GrantedAuthority> mapRolesToAuthorities(Collection <Role> roles) {
+        Collection < ? extends GrantedAuthority> mapRoles = roles.stream()
+                .map(role -> new SimpleGrantedAuthority(role.getName()))
                 .collect(Collectors.toList());
         return mapRoles;
     }

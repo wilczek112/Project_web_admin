@@ -7,26 +7,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Set;
 
 
-@Entity
-@Table(name = "privileges")
-@Getter
 @Setter
-@AllArgsConstructor
+@Getter
 @NoArgsConstructor
-public class Privileges {
+@AllArgsConstructor
+@Entity
+@Table(name="roles")
+public class Role
+{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "privileges", nullable = false)
-    private String privileges;
+    @Column(nullable=false, unique=true)
+    private String name;
 
-    @Column(name = "privileges_int", nullable = false)
-    private int privileges_int;
-
-    @ManyToMany(mappedBy = "privilegesList")
+    @ManyToMany(mappedBy="roles")
     private List<User> users;
 }

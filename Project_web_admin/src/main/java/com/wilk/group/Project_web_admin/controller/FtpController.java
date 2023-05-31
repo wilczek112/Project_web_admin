@@ -1,7 +1,6 @@
 package com.wilk.group.Project_web_admin.controller;
 
 
-import com.wilk.group.Project_web_admin.classes.Ftp_data;
 import com.wilk.group.Project_web_admin.classes.Ftp_file_database;
 import com.wilk.group.Project_web_admin.repository.Ftp_dataRepository;
 import org.apache.commons.net.ftp.FTPClient;

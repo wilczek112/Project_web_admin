@@ -12,7 +12,7 @@ class DatabaseCleanController{
     @Autowired
     ServerRepository serverRepository;
     @Autowired
-    PrivilegesRepository privilegesRepository;
+    RoleRepository roleRepository;
     @Autowired
     RouterRepository routerRepository;
     @Autowired
@@ -26,7 +26,7 @@ class DatabaseCleanController{
     public String destroy(){
         userRepository.deleteAll();
         serverRepository.deleteAll();
-        privilegesRepository.deleteAll();
+        roleRepository.deleteAll();
         routerRepository.deleteAll();
         rdpRepository.deleteAll();
         ftpRepository.deleteAll();

@@ -6,15 +6,19 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <meta charset="UTF-8">
         <div class="header">
-            <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center" th:href="@{/}">
+            <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center" th:href="@{/static}">
         </div>
     </section>
 </head>
 
 <body>
 <section class="srodek">
+    <div th:if="${param.success}">
+        <div class="alert alert-info">Pomyślnie zarejestrowane
+            to our app!</div>
+    </div>
     <div class="spanel">
-        <form action="#" th:action="@{/saveUser}" th:object="${user}" method="post" class="form">
+        <form action="#" th:action="@{/register/saveUser}" th:object="${user}" method="post" class="form">
             <div class="inputbox">
                 <span>Login:</span>
                 <input type="text" placeholder="Login" th:field="*{login}" />
@@ -31,7 +35,7 @@
                 <div class="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
             </div>
             <input class="btn" type="submit" value="Zarejestruj się"/>
-            <a class="btn" style="text-decoration:none" th:href="@{/}">Powrót do logowania</a>
+            <a class="btn" style="text-decoration:none" th:href="@{/static}">Powrót do logowania</a>
         </form>
     </div>
 </section>
