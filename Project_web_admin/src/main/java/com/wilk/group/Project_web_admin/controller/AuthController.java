@@ -31,6 +31,8 @@ public class AuthController {
 
     @GetMapping("index")
     public String index(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if(authentication.isAuthenticated()) return "redirect:/panel";
         return "index";
     }
 
