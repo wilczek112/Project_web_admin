@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         }
         user.setRoles(Arrays.asList(role));
         userRepository.save(user);
-        //NewUserFtpDir("/G/Users/"+user.getLogin());
+        NewUserFtpDir("/G/Users/"+user.getLogin());
     }
 
     @Override

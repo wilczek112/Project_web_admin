@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class addController {
     @Autowired
     ServerRepository serverRepository;
-
     @Autowired
     RouterRepository routerRepository;
     @Autowired
@@ -30,7 +29,6 @@ public class addController {
     RdpRepository rdpRepository;
     @Autowired
     Ftp_dataRepository ftp_dataRepository;
-
     @Autowired
     DatabaseRepository databaseRepository;
     @GetMapping(path = "/addServer")

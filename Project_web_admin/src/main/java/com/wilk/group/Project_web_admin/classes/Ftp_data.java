@@ -18,6 +18,15 @@ public class Ftp_data {
     @Column(name = "ip_address", nullable = false)
     private String ip_address;
 
+    @Column(name = "port", nullable = false)
+    private String port;
+
+    @Column(name = "login", nullable = false)
+    private String login;
+
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @Column(name = "status", nullable = false)
     private String status;
 

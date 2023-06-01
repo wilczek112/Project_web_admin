@@ -12,8 +12,8 @@ public class Vpn {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "protocole", nullable = false)
-    private String ftp_path;
+    @Column(name = "vpn_protocole", nullable = false)
+    private String vpn_protocole;
 
     @Column(name = "ip_address", nullable = false)
     private String ip_address;
@@ -24,8 +24,11 @@ public class Vpn {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "key", nullable = true)
-    private String key;
+    @Column(name = "authkey", nullable = true)
+    private String authkey;
+
+    @Column(name = "status", nullable = false)
+    private String status;
 
     @Column(name = "role_id", nullable = false)
     private int role_id;

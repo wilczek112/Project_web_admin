@@ -9,8 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class FtpServiceTest {
 
-    @Autowired
-    private FtpService ftpService;
+//    @Autowired
+//    private FtpService ftpService;
 
     @Test
     public void test() throws Exception {
