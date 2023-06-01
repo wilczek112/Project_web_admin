@@ -10,8 +10,10 @@
             <h2 class="godzina">Godzina: </h2>
             <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
             <h2 class="zalogowany"> zalogowany użytkownik: <th th:text="${user.getLogin()}"></th></h2>
-            <button class="btn button2">wyloguj</button>
+                <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
+                </div>
         </div>
+
     </section>
 </head>
 <body>
