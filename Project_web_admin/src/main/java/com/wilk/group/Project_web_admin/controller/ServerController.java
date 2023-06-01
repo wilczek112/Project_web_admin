@@ -24,13 +24,6 @@ public class ServerController {
     @Autowired
     private ServerRepository serverRepository;
 
-    @Autowired
-    private RoleRepository roleRepository;
-
-    private static final Logger log = LoggerFactory.getLogger(ScheduledTasks.class);
-
-    private UserService userService;
-
     @GetMapping(path = "/servers")
     public String getServers(Model model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
