@@ -38,6 +38,7 @@ public class SpringSecurity {
                         .requestMatchers("/router").hasAnyRole("ADMIN", "USER")
                         .requestMatchers("/database").hasAnyRole("ADMIN", "USER")
                         .requestMatchers("/router").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/servers").hasAnyRole("ADMIN", "USER")
                 ).formLogin(
                         form -> form
                                 .loginPage("/")
