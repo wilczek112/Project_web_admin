@@ -27,6 +27,6 @@ public class Vpn {
     @Column(name = "key", nullable = true)
     private String key;
 
-    @Column(name = "role", nullable = false)
-    private String role;
+    @Column(name = "role_id", nullable = false)
+    private int role_id;
 }

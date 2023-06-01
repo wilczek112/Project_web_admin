@@ -27,6 +27,6 @@ public class Server {
     @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "role", nullable = false)
-    private String role;
+    @Column(name = "role_id", nullable = false)
+    private int role_id;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <link rel="stylesheet" th:href="@{css/style.css}">
 <head>
     <section class="naglowek">
@@ -19,8 +19,11 @@
     <table>
         <thead>
         <tr>
-            <th> Adres ip </th>
             <th> Nazwa </th>
+            <th> Adres ip </th>
+            <th> Login </th>
+            <th> Hasło </th>
+            <th> Status </th>
         </tr>
         </thead>
         <tbody>
@@ -28,8 +31,11 @@
             <td colspan="2"> Brak serwerów :( </td>
         </tr>
         <tr th:each="server : ${servery}">
-                <td><span th:text="${server.ip_address}"> ip </span></td>
-                <td><span th:text="${server.name}"> name </span></td>
+            <td><span th:text="${server.ip_address}"> ip </span></td>
+            <td><span th:text="${server.name}"> name </span></td>
+            <td><span th:text="${server.login}"> ip </span></td>
+            <td><span th:text="${server.password}"> name </span></td>
+            <td><span th:text="${server.status}"> ip </span></td>
         </tr>
         </tbody>
     </table>

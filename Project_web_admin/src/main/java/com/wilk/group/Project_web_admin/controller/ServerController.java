@@ -1,8 +1,17 @@
 package com.wilk.group.Project_web_admin.controller;
 
+import com.wilk.group.Project_web_admin.ScheduledTasks;
+import com.wilk.group.Project_web_admin.classes.Role;
 import com.wilk.group.Project_web_admin.classes.Server;
+import com.wilk.group.Project_web_admin.classes.User;
+import com.wilk.group.Project_web_admin.repository.RoleRepository;
 import com.wilk.group.Project_web_admin.repository.ServerRepository;
+import com.wilk.group.Project_web_admin.services.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,21 +23,28 @@ import java.util.List;
 public class ServerController {
     @Autowired
     private ServerRepository serverRepository;
-    
 
+    @Autowired
+    private RoleRepository roleRepository;
+
+    private static final Logger log = LoggerFactory.getLogger(ScheduledTasks.class);
+
+    private UserService userService;
 
     @GetMapping(path = "/servers")
     public String getServers(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean hasUserRole = authentication.getAuthorities().stream()
+                .anyMatch(r -> r.getAuthority().equals("ROLE_ADMIN"));
         List<Server> servers = serverRepository.findAll();
         List<Server> serverUser = new ArrayList<>();
         for(int i=0;i<servers.size();i++){
-            //System.out.println(servers.get(i).getPrivileges());
-            //if(servers.get(i).getPrivileges()==2) serverUser.add(servers.get(i));
+            if(servers.get(i).getRole_id()==2) serverUser.add(servers.get(i));
         }
-        int who=1;
-        if(who==0) model.addAttribute("servery",servers);
-        if(who==1) model.addAttribute("servery", serverUser);
-        return "html/serwer";
+
+        if(hasUserRole==true) model.addAttribute("servery",servers);
+        else model.addAttribute("servery", serverUser);
+        return "serwer";
     }
 //    @GetMapping(path = "/getServers")
 //    public @ResponseBody Iterable<Server> getServers(){

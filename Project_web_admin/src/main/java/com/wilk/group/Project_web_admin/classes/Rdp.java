@@ -24,6 +24,6 @@ public class Rdp {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "role", nullable = false)
-    private String role;
+    @Column(name = "role_id", nullable = false)
+    private int role_id;
 }
