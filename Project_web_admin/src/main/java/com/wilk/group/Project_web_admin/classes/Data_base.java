@@ -7,7 +7,7 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "data_base")
-public class Date_base{
+public class Data_base {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
