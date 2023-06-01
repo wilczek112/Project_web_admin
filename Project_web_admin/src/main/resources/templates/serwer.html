@@ -14,9 +14,30 @@
         </div>
     </section>
 </head>
-<body>
+<body onload="timeCount();">
+<script>
+                function timeCount() {
+                var today = new Date();
+
+                var hour = today.getHours();
+                if(hour<10)hour = "0"+hour;
+
+                var minute = today.getMinutes();
+                if(minute<10)minute = "0"+minute;
+
+                var second = today.getSeconds();
+                if(second<10)second = "0"+second;
+
+                document.getElementById("clock").innerHTML = hour+":"+minute+":"+second;
+
+                setTimeout("timeCount()", 1000);
+                }
+                </script>
+
+<section class="srodek">
+    <div class="inner">
     <h1>Dostępne serwery</h1>
-    <table>
+    <table class="styled-table">
         <thead>
         <tr>
             <th> Nazwa </th>
@@ -40,8 +61,9 @@
         </tbody>
     </table>
 
-    <p><button>restart</button>&emsp;<button>wyłącz</button>&emsp;<button>wyloguj</button>&emsp;<button>powrót do panelu zarządzania</button></p>
-
+    <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>&emsp;<button class="btn">wyloguj</button>&emsp;<button class="btn">powrót do panelu zarządzania</button>
+</div>
+</section>
 </body>
 <section class="stopka">
     <div class="dpanel">
