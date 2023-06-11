@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" th:href="@{css/style.css}">
+<link rel="stylesheet" th:href="@{/css/style.css}">
 <head>
     <section class="naglowek">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <meta charset="UTF-8">
         <div class="header">
-            <title>Dodawanie serwera</title>
+            <title>Dodawanie vpn</title>
             <h2 class="godzina">
                 <div id="clock"></div>
             </h2>
-            <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
+            <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
 <!--            <h2 class="zalogowany"> zalogowany użytkownik: <th th:text="${user.getLogin()}"></th></h2>-->
             <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
 
@@ -42,11 +42,11 @@
         <div class="alert alert-info">Pomyślnie dodano!</div>
     </div>
     <div class="spanel">
-        <form action="#" th:action="@{/addServer/save}" th:object="${server}" method="post" class="form">
+        <form action="#" th:action="@{/admin/addVpn/save}" th:object="${vpn}" method="post" class="form">
             <div class="inputbox">
                 <span>Nazwa:</span>
-                <input type="text" placeholder="Name" th:field="*{name}" />
-                <div class="alert" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                <input type="text" placeholder="Protokół VPN" th:field="*{vpn_protocole}" />
+                <div class="alert" th:if="${#fields.hasErrors('vpn_protocole')}" th:errors="*{name}"></div>
             </div>
             <div class="inputbox">
                 <span>Adresy IP: </span>
@@ -65,6 +65,11 @@
             </div>
             <div class="inputbox">
                 <span>Status:</span>
+                <input type="text" placeholder="Klucz autentykacyjny" th:field="*{authkey}" />
+                <div class="alert" th:if="${#fields.hasErrors('authkey')}" th:errors="*{authkey}"></div>
+            </div>
+            <div class="inputbox">
+                <span>Status:</span>
                 <input type="text" placeholder="Status" th:field="*{status}" />
                 <div class="alert" th:if="${#fields.hasErrors('status')}" th:errors="*{status}"></div>
             </div>
@@ -74,8 +79,8 @@
                     <option th:value="2" th:text="User"></option>
                 </select>
             </div>
-            <input class="btn" type="submit" value="Dodaj server"/>
-            <a class="btn" style="text-decoration:none" th:href="@{/index}">Powrót</a>
+            <input class="btn" type="submit" value="Dodaj vpn"/>
+            <a class="btn" style="text-decoration:none" th:href="@{/admin}">Powrót</a>
         </form>
     </div>
 </section>

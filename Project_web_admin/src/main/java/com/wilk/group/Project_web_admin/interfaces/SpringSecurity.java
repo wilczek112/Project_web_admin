@@ -34,12 +34,8 @@ public class SpringSecurity {
                         .requestMatchers("/index").permitAll()
                         .requestMatchers("/css/**").permitAll()
                         .requestMatchers("/images/**").permitAll()
-                        .requestMatchers("/panel").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers("/addServer/**").hasRole("ADMIN")
-                        .requestMatchers("/database").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers("/routers").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers("/servers").hasAnyRole("ADMIN", "USER")
-                        .requestMatchers("/rdp").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/*").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
                 ).formLogin(
                         form -> form
                                 .loginPage("/")
