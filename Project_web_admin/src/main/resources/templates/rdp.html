@@ -4,13 +4,11 @@
 <head>
     <section class="naglowek">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"  charset="UTF-8">
+        <meta charset="UTF-8">
         <div class="header">
             <title>Serwery</title>
-            <h2 class="godzina">
-                <div id="clock"></div>
-            </h2>
-            <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="200px" height="100px" class="center">
+            <h2 class="godzina">Godzina: </h2>
+            <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
             <h2 class="zalogowany"> zalogowany użytkownik: admin</h2>
             <button class="btn button2">wyloguj</button>
         </div>
@@ -18,40 +16,41 @@
 </head>
 <body onload="timeCount();">
 <script>
-    function timeCount() {
-        var today = new Date();
+                function timeCount() {
+                var today = new Date();
 
-        var hour = today.getHours();
-        if(hour<10)hour = "0"+hour;
+                var hour = today.getHours();
+                if(hour<10)hour = "0"+hour;
 
-        var minute = today.getMinutes();
-        if(minute<10)minute = "0"+minute;
+                var minute = today.getMinutes();
+                if(minute<10)minute = "0"+minute;
 
-        var second = today.getSeconds();
-        if(second<10)second = "0"+second;
+                var second = today.getSeconds();
+                if(second<10)second = "0"+second;
 
-        document.getElementById("clock").innerHTML = hour+":"+minute+":"+second;
+                document.getElementById("clock").innerHTML = hour+":"+minute+":"+second;
 
-        setTimeout("timeCount()", 1000);
-    }
-</script>
+                setTimeout("timeCount()", 1000);
+                }
+                </script>
 
 <section class="srodek">
     <div class="inner">
-        <h1>Dostępne pulpity</h1>
-        <table class="styled-table">
-            <thead>
-            <tr>
-                <th> Nazwa </th>
-                <th> Adres ip </th>
-                <th> Login </th>
-                <th> Hasło </th>
-                <th> Status </th>
-            </tr>
-            </thead>
-            <tbody>
+
+<h1>Dostępne serwery</h1>
+<table class="styled-table">
+    <thead>
+    <tr>
+        <th> Nazwa </th>
+        <th> Adres ip </th>
+        <th> Login </th>
+        <th> Hasło </th>
+        <th> Status </th>
+    </tr>
+    </thead>
+    <tbody>
     <tr th:if="${rdps.isEmpty()}">
-        <td colspan="2"> Brak pulpitów :( </td>
+        <td colspan="2"> Brak serwerów :( </td>
     </tr>
     <tr th:each="rdp : ${rdps}">
         <td><span th:text="${rdp.ip_address}"> ip </span></td>
@@ -63,7 +62,8 @@
     </tbody>
 </table>
 
-        <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>&emsp;<a th:href="@{/logout}" style="text-decoration:none" class="btn">wyloguj </a>&emsp; <a th:href="@{/panel}" style="text-decoration:none" class="btn">powrót do panelu zarzadzania </a>
+        <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>&emsp;<button class="btn">wyloguj</button>&emsp;<button class="btn">powrót do panelu zarządzania</button>
+
     </div>
 </section>
 </body>

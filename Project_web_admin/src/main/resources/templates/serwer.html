@@ -4,14 +4,12 @@
 <head>
     <section class="naglowek">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"  charset="UTF-8">
+        <meta charset="UTF-8">
         <div class="header">
             <title>Serwery</title>
-            <h2 class="godzina">
-                <div id="clock"></div>
-            </h2>
-            <img th:src="@{images/PhpMyAdmin_logo_v2.png}" width="18%" height="17%" class="center">
-            <h2 class="zalogowany"> zalogowany użytkownik: admin</h2>
+            <h2 class="godzina">Godzina: </h2>
+            <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
+            <h2 class="zalogowany"> zalogowany: admin</h2>
             <button class="btn button2">wyloguj</button>
         </div>
     </section>
@@ -63,7 +61,7 @@
         </tbody>
     </table>
 
-        <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>&emsp;<a th:href="@{/logout}" style="text-decoration:none" class="btn">wyloguj </a>&emsp; <a th:href="@{/panel}" style="text-decoration:none" class="btn">powrót do panelu zarzadzania </a>
+    <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>&emsp;<button class="btn">wyloguj</button>&emsp;<button class="btn">powrót do panelu zarządzania</button>
 </div>
 </section>
 </body>

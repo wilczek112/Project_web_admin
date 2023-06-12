@@ -21,16 +21,16 @@
   margin-left: 14.35%;
   }
 
-.srodek{
-background-image:  url(https://images2.alphacoders.com/105/1059227.jpg);
-background-size: 100%;
-background-position: center 100%;
-background-repeat: no-repeat;
-	color:var(--black);
-	width: 100%;
-	height: 65%;
-	padding-top: 5%;
-	padding-bottom: 3%;
+.srodek {
+  background-image: url(https://images2.alphacoders.com/105/1059227.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--black);
+  width: 100%;
+  height: 65%;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
 
 html, body {
@@ -38,6 +38,18 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: Calibri;
+  }
+  .header{
+  height:100%;
+  width:100%;
+  align: center;
+  }
+  .logo{
+  height: 100%;
+  width: 10%;
+
+    margin-left: auto;
+    margin-right: auto;
   }
 .srodek .inputbox input {
 	width: 100%;
@@ -48,13 +60,22 @@ html, body {
 	border: var(--border);
 	font-family: Calibri;
   }
+  .srodek .inputbox1 input {
+  	width: 90%;
+  	padding: 0.5rem 0.5rem;
+  	font-size: 1.2rem;
+  	color: var(--light-black);
+  	margin-top: 0rem;
+  	border: var(--border);
+  	font-family: Calibri;
+    }
 .srodek .form span{
 	font-size: 1.5rem;
 }
 .stopka{
 	background-color: var(--black);
 	width: 100%;
-	height: 12%;
+	height: 100%;
 	color:var(--white);
 	position: fixed;
   	right: 1;
@@ -83,6 +104,7 @@ styled-table thead tr {
     color: #ffffff;
     text-align: left;
 }
+
 .styled-table th,
 .styled-table td {
     padding: 12px 15px;
@@ -108,8 +130,8 @@ display: flex;
 .inner {
   background-color: #acacac;
   text-align: center;
-  width: 92.5%;
-  height: 90%;
+  width: 90%;
+  height: 100%;
   margin: 0 auto;
   box-shadow: 10px 10px 50px rgb(156, 124, 110);
   border-radius: 12px;
@@ -133,28 +155,27 @@ display: flex;
 
 .prawypanelhome {
   text-align: center;
-  width: 50%;
+  width: 45%;
   height: 86%;
   padding: 20px 50px;
   font-family: Calibri;
-  margin-right: 1rem;
+  margin-right: -4.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 2px solid black;
-  float: right;
+  float: left;
+  margin-left:0.5rem;
 }
 .zalogowany {
   position: absolute;
-  top: 2rem;
-  transform: translateY(-50%);
-  right: 8rem;
+  top: 0.9%;
+  right: 10%;
   color: var(--white);
 }
 .godzina{
 position: absolute;
-  top: 2rem;
-  transform: translateY(-50%);
-  left: 5rem;
+  top: 0.9%;
+  left: 5%;
   color: var(--white);
 }
 .llpanel {
@@ -221,20 +242,25 @@ width: 100px;
 background: #0a0a0a;
         border: 2px solid black;
         border-color: #373737;
-        float: right;
-        margin-right: 1rem;
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 0.9%;
+        right: 1%;
 }
 .button3{
-right: 7%;
-top: 1rem;
+top: 0.9%;
+right: 10%;
 border: 2px solid black;
 border-color: #373737;
 background: #0a0a0a;
 position: absolute;
 }
+.button4{
+margin-top: 1rem;
+}
+.button4 h2{
+
+}
+
 .btn:hover{
     background: var(--light-black);
 
