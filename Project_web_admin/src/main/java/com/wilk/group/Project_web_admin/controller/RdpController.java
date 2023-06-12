@@ -33,7 +33,7 @@ public class RdpController {
             if(rdps.get(i).getRole_id()==2) rdpUser.add(rdps.get(i));
         }
 
-        if(hasUserRole==true) model.addAttribute("servery",rdps);
+        if(hasUserRole==true) model.addAttribute("rdps",rdps);
         else model.addAttribute("rdps", rdpUser);
         return "rdp";
     }

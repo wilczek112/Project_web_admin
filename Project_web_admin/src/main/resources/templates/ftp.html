@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  charset="UTF-8">
     <title>FTP</title>
+    <h2 class="godzina">
+        <div id="clock"></div>
+    </h2>
 </head>
-<body>
+<<body onload="timeCount();">
+<script>
+    function timeCount() {
+        var today = new Date();
+
+        var hour = today.getHours();
+        if(hour<10)hour = "0"+hour;
+
+        var minute = today.getMinutes();
+        if(minute<10)minute = "0"+minute;
+
+        var second = today.getSeconds();
+        if(second<10)second = "0"+second;
+
+        document.getElementById("clock").innerHTML = hour+":"+minute+":"+second;
+
+        setTimeout("timeCount()", 1000);
+    }
+</script>
     <div>Dostępne pliki na stronie:</div>
     <tbody>
     <!--    <tr th:if="${ffd.isEmpty()}">-->
