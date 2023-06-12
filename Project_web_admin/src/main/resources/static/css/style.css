@@ -99,13 +99,32 @@ html, body {
 	opacity:0.81; 
 	font-family: Calibri;
 }
-styled-table thead tr {
+.styled-table{
+overflow-y:scroll;
+height:79%;
+display:block;
+border-collapse: collapse;
+padding-left: 33%;
+text-align:center;
+width:94%;
+}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+.styled-table thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
 }
 
-.styled-table th,
+.styled-table th{
+  position: sticky;
+  top: 0;
+  padding: 12px 15px;
+  color:#fff9;
+  background: #777;
+}
 .styled-table td {
     padding: 12px 15px;
 }
@@ -155,7 +174,7 @@ display: flex;
 
 .prawypanelhome {
   text-align: center;
-  width: 45%;
+  width: 55%;
   height: 86%;
   padding: 20px 50px;
   font-family: Calibri;
@@ -168,13 +187,13 @@ display: flex;
 }
 .zalogowany {
   position: absolute;
-  top: 0.9%;
+  top: 1.8%;
   right: 10%;
   color: var(--white);
 }
 .godzina{
 position: absolute;
-  top: 0.9%;
+  top: 1.8%;
   left: 5%;
   color: var(--white);
 }
@@ -243,12 +262,12 @@ background: #0a0a0a;
         border: 2px solid black;
         border-color: #373737;
         position: absolute;
-        top: 0.9%;
-        right: 1%;
+         top: 1.8%;
+        right: 1.5%;
 }
 .button3{
-top: 0.9%;
-right: 10%;
+         top: 1.8%;
+right: 8%;
 border: 2px solid black;
 border-color: #373737;
 background: #0a0a0a;

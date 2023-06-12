@@ -11,6 +11,7 @@
                 <div id="clock"></div>
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
+            <a style="text-decoration:none" th:href="@{/index}" class="btn button3" >Powrót</a>
             <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
 
         </div>
@@ -41,13 +42,19 @@
     <section class="container">
         <div class="sspanel">
             <span>Dostępne funkcje</span>
+            <br>
             <a style="text-decoration:none" th:href="@{/admin/addServer}" class="btn button4">Dodaj serwer</a>
+            <br>
             <a style="text-decoration:none" th:href="@{/admin/addRouter}" class="btn button4">Dodaj router</a>
+            <br>
             <a style="text-decoration:none" th:href="@{/admin/addVpn}" class="btn button4">Dodaj vpn</a>
+            <br>
             <a style="text-decoration:none" th:href="@{/admin/addRdp}" class="btn button4">Dodaj rdp</a>
+            <br>
             <a style="text-decoration:none" th:href="@{/admin/addFtp_data}" class="btn button4">Dodaj ftp</a>
+            <br>
             <a style="text-decoration:none" th:href="@{/admin/addData_base}" class="btn button4">Dodaj bazę danych</a>
-            <a style="text-decoration:none" th:href="@{/index}" class="btn button4" >POWRÓT</a>
+            <br>
         </div>
     </section>
 </section>

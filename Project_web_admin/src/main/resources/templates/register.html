@@ -43,17 +43,17 @@
             <div class="inputbox">
                 <span>Login:</span>
                 <input type="text" placeholder="Login" th:field="*{login}" />
-                <div class="alert" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>
+                <div class="alertt" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>
             </div>
             <div class="inputbox">
                 <span>Hasło: </span>
                 <input type="password" placeholder="Haslo" th:field="*{password}" />
-                <div class="alert" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+                <div class="alertt" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
             </div>
             <div class="inputbox">
                 <span>E-mail:</span>
                 <input type="text" placeholder="Email" th:field="*{email}" />
-                <div class="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                <div class="alertt" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
             </div>
             <input class="btn" type="submit" value="Zarejestruj się"/>
             <a class="btn" style="text-decoration:none" th:href="@{/index}">Powrót do logowania</a>
