@@ -1,5 +1,6 @@
 package com.wilk.group.Project_web_admin.interfaces;
 
+import com.wilk.group.Project_web_admin.services.CustomAccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
@@ -31,6 +33,7 @@ public class SpringSecurity {
                         .requestMatchers("/register/**").permitAll()
                         .requestMatchers("/saveUser").permitAll()
                         .requestMatchers("/index").permitAll()
+                        .requestMatchers("/favicon.ico").permitAll()
                         .requestMatchers("/css/**").permitAll()
                         .requestMatchers("/images/**").permitAll()
                         .requestMatchers("/panel/**").hasAnyRole("ADMIN", "USER")
@@ -45,7 +48,7 @@ public class SpringSecurity {
                         logout -> logout
                                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                                 .permitAll()
-                ).exceptionHandling().accessDeniedPage("/index");
+                ).exceptionHandling().accessDeniedHandler(accessDeniedHandler());
         return http.build();
     }
     @Autowired
@@ -54,5 +57,8 @@ public class SpringSecurity {
                 .userDetailsService(userDetailsService)
                 .passwordEncoder(passwordEncoder());
     }
-
+    @Bean
+    public AccessDeniedHandler accessDeniedHandler(){
+        return new CustomAccessDeniedHandler();
+    }
 }
