@@ -41,8 +41,8 @@
     <table class="styled-table">
         <thead>
         <tr>
-            <th> Nazwa </th>
             <th> Adres ip </th>
+            <th> Nazwa </th>
             <th> Login </th>
             <th> Hasło </th>
             <th> Status </th>
@@ -55,9 +55,9 @@
         <tr th:each="server : ${servery}">
             <td><span th:text="${server.ip_address}"> ip </span></td>
             <td><span th:text="${server.name}"> name </span></td>
-            <td><span th:text="${server.login}"> ip </span></td>
-            <td><span th:text="${server.password}"> name </span></td>
-            <td><span th:text="${server.status}"> ip </span></td>
+            <td><span th:text="${server.login}"> login </span></td>
+            <td><span th:text="${server.password}"> password </span></td>
+            <td><span th:text="${server.status}"> status </span></td>
         </tr>
         </tbody>
     </table>

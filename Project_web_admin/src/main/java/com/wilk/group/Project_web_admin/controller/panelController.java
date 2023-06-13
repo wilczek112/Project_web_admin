@@ -1,6 +1,6 @@
 package com.wilk.group.Project_web_admin.controller;
 
-import com.wilk.group.Project_web_admin.classes.Server;
+import com.wilk.group.Project_web_admin.classes.*;
 import com.wilk.group.Project_web_admin.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -33,13 +33,13 @@ public class panelController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         boolean hasUserRole = authentication.getAuthorities().stream()
                 .anyMatch(r -> r.getAuthority().equals("ROLE_ADMIN"));
-        List<com.wilk.group.Project_web_admin.classes.Vpn> vpns = vpnRepository.findAll();
-        List<com.wilk.group.Project_web_admin.classes.Vpn> vpnUser = new ArrayList<>();
-        for(int i=0;i<vpns.size();i++){
-            if(vpns.get(i).getRole_id()==2) vpnUser.add(vpns.get(i));
+        List<Vpn> vpn = vpnRepository.findAll();
+        List<Vpn> vpnUser = new ArrayList<>();
+        for(int i=0;i<vpn.size();i++){
+            if(vpn.get(i).getRole_id()==2) vpnUser.add(vpn.get(i));
         }
 
-        if(hasUserRole==true) model.addAttribute("vpn",vpns);
+        if(hasUserRole==true) model.addAttribute("vpn",vpn);
         else model.addAttribute("vpn", vpnUser);
         return "vpn";
     }
@@ -53,8 +53,8 @@ public class panelController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         boolean hasUserRole = authentication.getAuthorities().stream()
                 .anyMatch(r -> r.getAuthority().equals("ROLE_ADMIN"));
-        List<com.wilk.group.Project_web_admin.classes.Router> routers = routerRepository.findAll();
-        List<com.wilk.group.Project_web_admin.classes.Router> routersUser = new ArrayList<>();
+        List<Router> routers = routerRepository.findAll();
+        List<Router> routersUser = new ArrayList<>();
         for (int i = 0; i < routers.size(); i++) {
             if (routers.get(i).getRole_id() == 2) routersUser.add(routers.get(i));
         }
@@ -68,8 +68,8 @@ public class panelController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         boolean hasUserRole = authentication.getAuthorities().stream()
                 .anyMatch(r -> r.getAuthority().equals("ROLE_ADMIN"));
-        List<com.wilk.group.Project_web_admin.classes.Rdp> rdps = rdpRepository.findAll();
-        List<com.wilk.group.Project_web_admin.classes.Rdp> rdpUser = new ArrayList<>();
+        List<Rdp> rdps = rdpRepository.findAll();
+        List<Rdp> rdpUser = new ArrayList<>();
         for(int i=0;i<rdps.size();i++){
             if(rdps.get(i).getRole_id()==2) rdpUser.add(rdps.get(i));
         }
@@ -89,8 +89,8 @@ public class panelController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         boolean hasUserRole = authentication.getAuthorities().stream()
                 .anyMatch(r -> r.getAuthority().equals("ROLE_ADMIN"));
-        List<com.wilk.group.Project_web_admin.classes.Data_base> dataBases = databaseRepository.findAll();
-        List<com.wilk.group.Project_web_admin.classes.Data_base> dataBaseUser = new ArrayList<>();
+        List<Data_base> dataBases = databaseRepository.findAll();
+        List<Data_base> dataBaseUser = new ArrayList<>();
         for(int i=0;i<dataBases.size();i++){
             if(dataBases.get(i).getRole_id()==2) dataBaseUser.add(dataBases.get(i));
         }

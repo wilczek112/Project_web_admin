@@ -104,9 +104,9 @@ overflow-y:scroll;
 height:79%;
 display:block;
 border-collapse: collapse;
-padding-left: 33%;
+margin: auto;
 text-align:center;
-width:94%;
+width:480px;
 }
 ::-webkit-scrollbar {
     width: 0;
