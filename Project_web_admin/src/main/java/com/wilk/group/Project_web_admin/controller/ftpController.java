@@ -1,24 +1,15 @@
 package com.wilk.group.Project_web_admin.controller;
 
 
-import com.wilk.group.Project_web_admin.classes.Ftp_data;
-import com.wilk.group.Project_web_admin.classes.Ftp_file_database;
-import com.wilk.group.Project_web_admin.repository.Ftp_dataRepository;
-import jakarta.annotation.PostConstruct;
-import org.apache.commons.net.ftp.FTPClient;
-import org.apache.commons.net.ftp.FTPFile;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
-import java.util.List;
 @Component
 @Controller
-public class Ftp_dataController {
+public class ftpController {
 
 //    @Autowired
 //    private Ftp_dataRepository ftp_dataRepository;
@@ -47,12 +38,12 @@ public class Ftp_dataController {
 //            }
 //        }
 //    }
-    @RequestMapping(path="/ftp")
+    @RequestMapping(path="/panel/ftp")
     public String servers(){
         return "html/ftp";
     }
 
-    @GetMapping(path = "/ftpshow")
+    @GetMapping(path = "/panel/ftpshow")
     public String getServers(Model model){
 
         //model.addAttribute("files_database", ftp_file_database);

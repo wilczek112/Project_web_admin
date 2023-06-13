@@ -1,4 +1,4 @@
-package com.wilk.group.Project_web_admin.controller;
+package com.wilk.group.Project_web_admin.controller.OLD;
 
 import com.wilk.group.Project_web_admin.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;

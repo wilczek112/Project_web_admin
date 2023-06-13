@@ -12,7 +12,7 @@
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
             <h2 class="zalogowany"> zalogowany: <th th:text="${user.getLogin()}"></th></h2>
-                <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
+            <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
 
         </div>
     </section>
@@ -39,14 +39,17 @@
                 </script>
 
 <section class="srodek">
+    <div th:if="${param.error}">
+        <div class="alert alert-danger">Brak uprawnień</div>
+    </div>
     <div class="inner">
         <div class="lewypanelhome">
             <h2>Dostępne funkcje:</h2>
-            <h2><a style="text-decoration:none" th:href="@{/servers}" class="btn button4">Serwery</a></h2>
-            <h2><a style="text-decoration:none" th:href="@{/rdp}" class="btn button4"> Pulpity zdalne</a></h2>
-            <h2><a style="text-decoration:none" th:href="@{/routers}" class="btn button4"> Routery</a></h2>
-            <h2><a style="text-decoration:none" th:href="@{/database}" class="btn button4">Zarządzanie bazą danych</a></h2>
-            <h2><a style="text-decoration:none" th:href="@{/admin}" class="btn button4" >Panel administracji</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/servers}" class="btn button4">Serwery</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/rdp}" class="btn button4"> Pulpity zdalne</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/routers}" class="btn button4"> Routery</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/database}" class="btn button4">Zarządzanie bazą danych</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/admin}" class="btn button4" >Panel administracji</a></h2>
         </div>
 
         <div class="prawypanelhome">

@@ -3,7 +3,6 @@ package com.wilk.group.Project_web_admin.interfaces;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -34,7 +33,7 @@ public class SpringSecurity {
                         .requestMatchers("/index").permitAll()
                         .requestMatchers("/css/**").permitAll()
                         .requestMatchers("/images/**").permitAll()
-                        .requestMatchers("/*").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/panel/**").hasAnyRole("ADMIN", "USER")
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                 ).formLogin(
                         form -> form
@@ -46,7 +45,7 @@ public class SpringSecurity {
                         logout -> logout
                                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                                 .permitAll()
-                );
+                ).exceptionHandling().accessDeniedPage("/index");
         return http.build();
     }
     @Autowired
