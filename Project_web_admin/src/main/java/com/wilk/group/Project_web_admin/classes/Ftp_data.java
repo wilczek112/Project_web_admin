@@ -12,8 +12,8 @@ public class Ftp_data {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "ftp_name", nullable = false)
-    private String ftp_name;
+    @Column(name = "name", nullable = false)
+    private String name;
 
     @Column(name = "ip_address", nullable = false)
     private String ip_address;

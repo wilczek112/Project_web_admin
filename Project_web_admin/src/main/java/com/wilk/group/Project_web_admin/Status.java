@@ -30,7 +30,7 @@ public class Status {
                 result = "OFF";
             }
         } catch (Exception e) {
-            result = "ERROR"+ e.getMessage();
+            result = "ERROR "+ e.getMessage();
         }
         //System.out.println(url + "\t\tStatus:" + result);
         return result;

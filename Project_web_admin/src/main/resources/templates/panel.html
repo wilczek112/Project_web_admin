@@ -40,8 +40,11 @@
 
 
 <section class="srodek">
-    <div th:if="${param.error}">
+    <div th:if="${param.AccessDenied}">
         <div class="alert alert-danger">Brak uprawnień</div>
+    </div>
+    <div th:if="${param.error}">
+        <div class="alert alert-danger">Błąd strony</div>
     </div>
     <div class="inner">
         <div class="lewypanelhome">
