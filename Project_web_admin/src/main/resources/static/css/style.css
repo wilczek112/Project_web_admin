@@ -163,11 +163,10 @@ display: flex;
   text-align: center;
   width: 30%;
   height: 86%;
-  padding: 20px 50px;
+  padding: 20px;
   font-family: Calibri;
   margin-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.2rem;
   border: 2px solid black;
   float: left;
 }
@@ -176,11 +175,9 @@ display: flex;
   text-align: center;
   width: 55%;
   height: 86%;
-  padding: 20px 50px;
+  padding: 20px;
   font-family: Calibri;
-  margin-right: -4.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1.2rem;
   border: 2px solid black;
   float: left;
   margin-left:0.5rem;
@@ -324,4 +321,19 @@ margin-top: 1rem;
 	color: #14396A;
 	background: #F71616;
 	background: linear-gradient(to top, #F71616, #D10000);
+}
+@media screen and (max-width: 1024px) {
+  .zalogowany{ display: none; }
+}
+@media screen and (max-width: 1024px) {
+  .logo{ width: 20%; }
+}
+@media screen and (max-width: 1320px) {
+  .button3{ right: 11%; }
+}
+@media screen and (max-width: 940px) {
+  .button3{ right: 13%; }
+}
+@media screen and (max-width: 760px) {
+  .button3{ right: 15%; }
 }
