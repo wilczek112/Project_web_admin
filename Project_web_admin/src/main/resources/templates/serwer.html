@@ -12,6 +12,7 @@
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
             <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
+            <a type="submit" style="text-decoration:none" th:href="@{/panel}" class="btn button3">Panel zarządzania</a>
         </div>
     </section>
 </head>
@@ -36,16 +37,18 @@
                 </script>
 
 <section class="srodek">
-    <div class="inner">
+    <div class="sspanel">
     <h1>Dostępne serwery</h1>
     <table class="styled-table">
         <thead>
         <tr>
-            <th> Adres ip </th>
             <th> Nazwa </th>
+            <th> Adres ip </th>
             <th> Login </th>
             <th> Hasło </th>
             <th> Status </th>
+            <th> Edytuj </th>
+            <th> Usuń </th>
         </tr>
         </thead>
         <tbody>
@@ -53,8 +56,8 @@
             <td colspan="2"> Brak serwerów :( </td>
         </tr>
         <tr th:each="server : ${servery}">
-            <td><span th:text="${server.ip_address}"> ip </span></td>
             <td><span th:text="${server.name}"> name </span></td>
+            <td><span th:text="${server.ip_address}"> ip </span></td>
             <td><span th:text="${server.login}"> login </span></td>
             <td><span th:text="${server.password}"> password </span></td>
             <td><span th:if="${server.status}=='ON'" style="color: green"> ● </span>
@@ -65,8 +68,6 @@
         </tr>
         </tbody>
     </table>
-
-    <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>
 </div>
 </section>
 </body>

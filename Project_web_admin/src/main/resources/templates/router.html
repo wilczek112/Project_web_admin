@@ -11,7 +11,7 @@
                 <div id="clock"></div>
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
-            <button class="btn button2">wyloguj</button>
+            <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
             <a type="submit" style="text-decoration:none" th:href="@{/panel}" class="btn button3">Panel zarządzania</a>
 
         </div>
@@ -21,7 +21,7 @@
 <section class="srodek">
 
         <div class="sspanel">
-            <h2>
+            <h1>Dostępne routery</h1>
             <table class="styled-table">
                 <thead>
                 <tr>
@@ -30,6 +30,8 @@
                     <th> Login </th>
                     <th> Hasło </th>
                     <th> Status </th>
+                    <th> Edytuj </th>
+                    <th> Usuń </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -44,10 +46,11 @@
                     <td><span th:if="${router.status}=='ON'" style="color: green"> ● </span>
                         <span th:if="${router.status}=='OFF'" style="color: red"> ● </span>
                         <span th:if="${router.status!='ON' and router.status!='OFF'}" style="color: yellow"> ● </span></td>
+                    <td th:if="${auth==true}"><a th:href="@{/admin/editRouter/{id}(id=${router.id})}">Edytuj</a></td>
+                    <td th:if="${auth==true}"><a th:href="@{/admin/deleteRouter/{id}(id=${router.id})}">Usuń</a></td>
                 </tr>
                 </tbody>
             </table>
-            </h2>
 
         </div>
 
