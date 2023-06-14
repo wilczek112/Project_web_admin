@@ -19,6 +19,9 @@
 </head>
 <body>
 <section class="srodek">
+    <div th:if="${param.success}">
+        <div class="alert alert-info">Pomyślnie zaktualizowano!</div>
+    </div>
     <section class="container">
         <h1>Dostępne routery</h1>
         <table class="styled-table">
@@ -41,6 +44,8 @@
                 <td><span th:text="${router.login}"> login </span></td>
                 <td><span th:text="${router.password}"> hasło </span></td>
                 <td><span th:text="${router.status}"> status </span></td>
+                <td th:if="${auth==true}"><a th:href="@{/admin/editRouter/{id}(id=${router.id})}">Edytuj</a></td>
+                <td th:if="${auth==true}"><a th:href="@{/admin/deleteRouter/{id}(id=${router.id})}">Usuń</a></td>
             </tr>
             </tbody>
         </table>

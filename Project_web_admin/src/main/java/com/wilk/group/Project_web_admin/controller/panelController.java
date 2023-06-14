@@ -28,6 +28,8 @@ public class panelController {
 
     @Autowired
     private VpnRepository vpnRepository;
+    @Autowired
+    private Ftp_dataRepository ftp_dataRepository;
     @GetMapping(path = "/panel/vpn")
     public String getVpn(Model model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -41,6 +43,7 @@ public class panelController {
 
         if(hasUserRole==true) model.addAttribute("vpn",vpn);
         else model.addAttribute("vpn", vpnUser);
+        model.addAttribute("auth", hasUserRole);
         return "vpn";
     }
     //    @GetMapping(path = "/getServers")
@@ -61,6 +64,7 @@ public class panelController {
 
         if (hasUserRole == true) model.addAttribute("routers", routers);
         else model.addAttribute("routers", routersUser);
+        model.addAttribute("auth", hasUserRole);
         return "router";
     }
     @GetMapping(path = "/panel/rdp")
@@ -76,6 +80,7 @@ public class panelController {
 
         if(hasUserRole==true) model.addAttribute("rdps",rdps);
         else model.addAttribute("rdps", rdpUser);
+        model.addAttribute("auth", hasUserRole);
         return "rdp";
     }
 //    @GetMapping(path = "/getServers")
@@ -97,6 +102,7 @@ public class panelController {
 
         if(hasUserRole==true) model.addAttribute("dataBases",dataBases);
         else model.addAttribute("dataBases", dataBaseUser);
+        model.addAttribute("auth", hasUserRole);
         return "database";
     }
 
@@ -112,6 +118,7 @@ public class panelController {
         }
         if(hasUserRole==true) model.addAttribute("servery",servers);
         else model.addAttribute("servery", serverUser);
+        model.addAttribute("auth", hasUserRole);
         return "serwer";
     }
 //    @GetMapping(path = "/getServers")
@@ -119,5 +126,15 @@ public class panelController {
 //        //model.addAttribute("servery", serverRepository.findAll());
 //        return serverRepository.findAll();
 //    }
+    @GetMapping(path = "/admin/ftpdata")
+    public String getFtpData(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean hasUserRole = authentication.getAuthorities().stream()
+                .anyMatch(r -> r.getAuthority().equals("ROLE_ADMIN"));
+        List<Ftp_data> ftpData = ftp_dataRepository.findAll();
+        model.addAttribute("ftp_data",ftpData);
+        model.addAttribute("auth", hasUserRole);
+        return "ftpdata";
+    }
 
 }

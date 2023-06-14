@@ -55,6 +55,7 @@
             <h2><a style="text-decoration:none" th:href="@{/panel/router}" class="btn button4"> Routery</a></h2>
             <h2><a style="text-decoration:none" th:href="@{/panel/server}" class="btn button4">Serwery</a></h2>
             <h2><a style="text-decoration:none" th:href="@{/panel/vpn}" class="btn button4">vpn</a></h2>
+            <h2 th:if="${auth==true}"><a style="text-decoration:none" th:href="@{/admin/ftpdata}" class="btn button4" >Dane FTP</a></h2>
             <h2 th:if="${auth==true}"><a style="text-decoration:none" th:href="@{/admin}" class="btn button4" >Panel administracji</a></h2>
         </div>
 

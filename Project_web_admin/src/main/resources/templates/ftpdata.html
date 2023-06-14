@@ -41,7 +41,7 @@
 
 
         <div class="llpanel">
-            <h1>Dostępne bazy danych</h1>
+            <h1>Dane FTP</h1>
             <table class="styled-table">
                 <thead>
                 <tr>
@@ -53,17 +53,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:if="${dataBases.isEmpty()}">
-                    <td colspan="2"> Brak serwerów :( </td>
+                <tr th:if="${ftp_data.isEmpty()}">
+                    <td colspan="2"> Brak serwerów ftp :( </td>
                 </tr>
-                <tr th:each="Data_base : ${dataBases}">
-                    <td><span th:text="${Data_base.ip_address}"> ip </span></td>
-                    <td><span th:text="${Data_base.name}"> name </span></td>
-                    <td><span th:text="${Data_base.login}"> login </span></td>
-                    <td><span th:text="${Data_base.password}"> password </span></td>
-                    <td><span th:text="${Data_base.status}"> status </span></td>
-                    <td th:if="${auth==true}"><a th:href="@{/admin/editData_base/{id}(id=${Data_base.id})}">Edytuj</a></td>
-                    <td th:if="${auth==true}"><a th:href="@{/admin/deleteData_base/{id}(id=${Data_base.id})}">Usuń</a></td>
+                <tr th:each="ftp : ${ftp_data}">
+                    <td><span th:text="${ftp.ip_address}"> ip </span></td>
+                    <td><span th:text="${ftp.name}"> name </span></td>
+                    <td><span th:text="${ftp.port}"> port </span></td>
+                    <td><span th:text="${ftp.login}"> login </span></td>
+                    <td><span th:text="${ftp.password}"> password </span></td>
+                    <td><span th:text="${ftp.status}"> status </span></td>
+                    <td th:if="${auth==true}"><a th:href="@{/admin/editFtp_data/{id}(id=${ftp.id})}">Edytuj</a></td>
+                    <td th:if="${auth==true}"><a th:href="@{/admin/deleteFtp_data/{id}(id=${ftp.id})}">Usuń</a></td>
                 </tr>
                 </tbody>
             </table>

@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <meta charset="UTF-8">
         <div class="header">
-            <title>Dodawanie ftp</title>
+            <title>Dodawanie rdp</title>
             <h2 class="godzina">
                 <div id="clock"></div>
             </h2>
@@ -38,11 +38,8 @@
                 }
                 </script>
 <section class="srodek">
-    <div th:if="${param.success}">
-        <div class="alert alert-info">Pomyślnie dodano!</div>
-    </div>
     <div class="spanel">
-        <form action="#" th:action="@{/admin/addFtp_data/save}" th:object="${ftp_data}" method="post" class="form">
+        <form action="#" th:action="@{/admin/updateRdp/{id}(id=${rdp.id})}" th:object="${rdp}" method="post" class="form">
             <div class="inputbox">
                 <span>Nazwa:</span>
                 <input type="text" placeholder="Name" th:field="*{name}" />
@@ -52,11 +49,6 @@
                 <span>Adresy IP: </span>
                 <input type="text" placeholder="Adres IP" th:field="*{ip_address}" />
                 <div class="alert" th:if="${#fields.hasErrors('ip_address')}" th:errors="*{ip_address}"></div>
-            </div>
-            <div class="inputbox">
-                <span>Login:</span>
-                <input type="text" placeholder="Port" th:field="*{port}" />
-                <div class="alert" th:if="${#fields.hasErrors('port')}" th:errors="*{port}"></div>
             </div>
             <div class="inputbox">
                 <span>Login:</span>
@@ -73,8 +65,14 @@
                 <input type="text" placeholder="Status" th:field="*{status}" />
                 <div class="alert" th:if="${#fields.hasErrors('status')}" th:errors="*{status}"></div>
             </div>
-            <input class="btn" type="submit" value="Dodaj ftp"/>
-            <a class="btn" style="text-decoration:none" th:href="@{/admin}">Powrót</a>
+            <div>
+                <select th:field="*{role_id}">
+                    <option th:value="1" th:text="Admin"></option>
+                    <option th:value="2" th:text="User"></option>
+                </select>
+            </div>
+            <input class="btn" type="submit" value="Zaktualizuj zdalny pulpit"/>
+            <a class="btn" style="text-decoration:none" th:href="@{/panel/rdp}">Powrót</a>
         </form>
     </div>
 </section>

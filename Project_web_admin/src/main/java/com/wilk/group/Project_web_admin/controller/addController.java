@@ -8,10 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class addController {
@@ -46,6 +43,30 @@ public class addController {
             return "redirect:/admin/addServer?success";
         }
     }
+    @GetMapping("/admin/editServer/{id}")
+    public String editServer(@PathVariable("id") long id, Model model) {
+        Server server = serverRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid server Id:" + id));
+        model.addAttribute("servers", server);
+        return "edit/edit_server";
+    }
+    @PostMapping("/admin/updateServer/{id}")
+    public String updateServer(@PathVariable("id") long id, @Valid Server server,
+                            BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            server.setId(id);
+            return "edit/edit_server";
+        }
+        serverRepository.save(server);
+        return "redirect:/panel/server";
+    }
+    @GetMapping("/admin/deleteServer/{id}")
+    public String deleteServer(@PathVariable("id") long id, Model model) {
+        Server server = serverRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        serverRepository.delete(server);
+        return "redirect:/panel/server";
+    }
     @GetMapping(path = "admin/addRouter")
     public String router(Model model) {
         model.addAttribute("router", new Router());
@@ -59,6 +80,30 @@ public class addController {
             routerRepository.save(router);
             return "redirect:/admin/addRouter?success";
         }
+    }
+    @GetMapping("/admin/editRouter/{id}")
+    public String editRouter(@PathVariable("id") long id, Model model) {
+        Router router = routerRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid router Id:" + id));
+        model.addAttribute("routers", router);
+        return "edit/edit_router";
+    }
+    @PostMapping("/admin/updateRouter/{id}")
+    public String updateRouter(@PathVariable("id") long id, @Valid Router router,
+                            BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            router.setId(id);
+            return "edit/edit_router";
+        }
+        routerRepository.save(router);
+        return "redirect:/panel/router";
+    }
+    @GetMapping("/admin/deleteRouter/{id}")
+    public String deleteRouter(@PathVariable("id") long id, Model model) {
+        Router router = routerRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        routerRepository.delete(router);
+        return "redirect:/panel/router";
     }
     @GetMapping(path = "admin/addVpn")
     public String vpn(Model model) {
@@ -74,6 +119,30 @@ public class addController {
             return "redirect:/admin/addVpn?success";
         }
     }
+    @GetMapping("/admin/editVpn/{id}")
+    public String editVpn(@PathVariable("id") long id, Model model) {
+        Vpn vpn = vpnRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid vpn Id:" + id));
+        model.addAttribute("vpn", vpn);
+        return "edit/edit_vpn";
+    }
+    @PostMapping("/admin/updateVpn/{id}")
+    public String updateVpn(@PathVariable("id") long id, @Valid Vpn vpn,
+                            BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            vpn.setId(id);
+            return "edit/edit_vpn";
+        }
+        vpnRepository.save(vpn);
+        return "redirect:/panel/vpn";
+    }
+    @GetMapping("/admin/deleteVpn/{id}")
+    public String deleteVpn(@PathVariable("id") long id, Model model) {
+        Vpn vpn = vpnRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        vpnRepository.delete(vpn);
+        return "redirect:/panel/vpn";
+    }
     @GetMapping(path = "admin/addRdp")
     public String rdp(Model model) {
         model.addAttribute("rdp", new Rdp());
@@ -88,7 +157,30 @@ public class addController {
             return "redirect:/admin/addRdp?success";
         }
     }
-    @GetMapping(path = "admin/addFtp_data")
+    @GetMapping("/admin/editRdp/{id}")
+    public String editRdp(@PathVariable("id") long id, Model model) {
+        Rdp rdp = rdpRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid rdp Id:" + id));
+        model.addAttribute("rdp", rdp);
+        return "edit/edit_rdp";
+    }
+    @PostMapping("/admin/updateRdp/{id}")
+    public String updateRdp(@PathVariable("id") long id, @Valid Rdp rdp,
+                                 BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            rdp.setId(id);
+            return "edit/edit_rdp";
+        }
+        rdpRepository.save(rdp);
+        return "redirect:/panel/rdp";
+    }
+    @GetMapping("/admin/deleteRdp/{id}")
+    public String deleteRdp(@PathVariable("id") long id, Model model) {
+        Rdp rdp = rdpRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        rdpRepository.delete(rdp);
+        return "redirect:/panel/rdp";
+    }    @GetMapping(path = "admin/addFtp_data")
     public String ftp_data(Model model) {
         model.addAttribute("ftp_data", new Ftp_data());
         return "add/add_ftp_data";
@@ -101,6 +193,30 @@ public class addController {
             ftp_dataRepository.save(ftp_data);
             return "redirect:/admin/addFtp_data?success";
         }
+    }
+    @GetMapping("/admin/editFtp_data/{id}")
+    public String editFtp_data(@PathVariable("id") long id, Model model) {
+        Ftp_data ftp_data = ftp_dataRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid ftp_data Id:" + id));
+        model.addAttribute("ftp_data", ftp_data);
+        return "edit/edit_ftp_data";
+    }
+    @PostMapping("/admin/updateFtp_data/{id}")
+    public String updateFtp_data(@PathVariable("id") long id, @Valid Ftp_data ftp_data,
+                             BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            ftp_data.setId(id);
+            return "edit/edit_ftp_data";
+        }
+        ftp_dataRepository.save(ftp_data);
+        return "redirect:/panel/ftp_data";
+    }
+    @GetMapping("/admin/deleteFtp_data/{id}")
+    public String deleteFtp_data(@PathVariable("id") long id, Model model) {
+        Ftp_data ftp_data = ftp_dataRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        ftp_dataRepository.delete(ftp_data);
+        return "redirect:/panel/ftp_data";
     }
     @GetMapping(path = "admin/addData_base")
     public String data_base(Model model) {
@@ -115,5 +231,29 @@ public class addController {
             databaseRepository.save(data_base);
             return "redirect:/admin/addData_base?success";
         }
+    }
+    @GetMapping("/admin/editData_base/{id}")
+    public String editData_base(@PathVariable("id") long id, Model model) {
+        Data_base data_base = databaseRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid data_base Id:" + id));
+        model.addAttribute("data_base", data_base);
+        return "edit/edit_data_base";
+    }
+    @PostMapping("/admin/updateData_base/{id}")
+    public String updateData_base(@PathVariable("id") long id, @Valid Data_base data_base,
+                             BindingResult result, Model model) {
+        if (result.hasErrors()) {
+            data_base.setId(id);
+            return "edit/edit_data_base";
+        }
+        databaseRepository.save(data_base);
+        return "redirect:/panel/database";
+    }
+    @GetMapping("/admin/deleteData_base/{id}")
+    public String deleteData_base(@PathVariable("id") long id, Model model) {
+        Data_base data_base = databaseRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        databaseRepository.delete(data_base);
+        return "redirect:/panel/database";
     }
 }
