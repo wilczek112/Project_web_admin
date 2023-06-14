@@ -68,7 +68,7 @@
                             <td><span th:text="${server.ip_address}"> ip </span></td>
                             <td><span th:if="${server.status}=='ON'" style="color: green"> ● </span></td>
                             <td><span th:if="${server.status}=='OFF'" style="color: red"> ● </span></td>
-                            <td><span th:if="${server.status}!='ON' and 'OFF'" style="color: yellow"> ● </span></td>
+                            <td><span th:if="${server.status!='ON' and server.status!='OFF'}" style="color: yellow"> ● </span></td>
                         </tr>
                     </tbody>
                 </table>

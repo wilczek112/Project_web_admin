@@ -25,8 +25,8 @@ public class Status {
             code = connection.getResponseCode();
             if (code == 200) {
                 result = "ON";
-                ;
-            } else {
+            }
+            else {
                 result = "OFF";
             }
         } catch (Exception e) {
