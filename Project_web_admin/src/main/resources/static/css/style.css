@@ -101,17 +101,35 @@ html, body {
 }
 .styled-table{
 overflow-y:scroll;
-height:79%;
+height:71%;
 display:block;
 border-collapse: collapse;
 margin: auto;
 text-align:center;
 width:646px;
 }
+
+
+.sstyled-table {
+    overflow-y: scroll;
+    height: 71%;
+    display: block;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    width: 363px;
+}
+
+
+
+
 ::-webkit-scrollbar {
     width: 0;
     background: transparent;
 }
+
+
+
 .styled-table thead tr {
     background-color: #009879;
     color: #ffffff;
@@ -147,41 +165,65 @@ width:646px;
 display: flex;
 }
 .inner {
-  background-color: #acacac;
-  text-align: center;
-  width: 90%;
-  height: 100%;
-  margin: 0 auto;
-  box-shadow: 10px 10px 50px rgb(156, 124, 110);
-  border-radius: 12px;
-  opacity: 0.81;
-  font-family: Calibri;
-  border: 2px solid black;
-  border-color: #373737;
-}
-.lewypanelhome {
-  text-align: center;
-  width: 30%;
-  height: 86%;
-  padding: 20px;
-  font-family: Calibri;
-  margin-left: 1rem;
-  margin-top: 1.2rem;
-  border: 2px solid black;
-  float: left;
+    background-color: #acacac;
+    text-align: center;
+    width: 90%;
+    height: 113%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 50px rgb(156, 124, 110);
+    border-radius: 12px;
+    opacity: 0.81;
+    font-family: Calibri;
+    border: 2px solid black;
+    border-color: #373737;
 }
 
-.prawypanelhome {
-  text-align: center;
-  width: 62.5%;
-  height: 86%;
-  padding: 20px;
-  font-family: Calibri;
-  margin-top: 1.2rem;
-  border: 2px solid black;
-  float: left;
-  margin-left:0.5rem;
+.pinner {
+    background-color: #acacac;
+    text-align: center;
+    align-items: center;
+    width: 86%;
+    height: 112%;
+    margin: 0 auto;
+    box-shadow: 10px 10px 50px rgb(156 124 110);
+    border-radius: 15px;
+    opacity: 0.81;
+    font-family: Calibri;
+    border: 1px solid black;
+    border-color: #373737;
 }
+
+
+.lewypanelhome {
+    text-align: center;
+    width: 30%;
+    height: 82.5%;
+    padding: 20px;
+    font-family: Calibri;
+    overflow-x: auto;
+    margin-left: 1rem;
+    margin-top: 1.2rem;
+    border: 2px solid black;
+    float: left;
+}
+
+
+.prawypanelhome {
+    text-align: center;
+    width: 55%;
+    height: 77.5%;
+    padding: 32px;
+    position: relative;
+    left: 32px;
+    overflow-x: auto;
+    font-family: Calibri;
+    margin-top: 1.2rem;
+    border: 2px solid black;
+    float: left;
+    margin-left: 0.5rem;
+}
+
+
 .zalogowany {
   position: absolute;
   top: 1.8%;
@@ -194,6 +236,9 @@ position: absolute;
   left: 5%;
   color: var(--white);
 }
+
+
+
 .llpanel {
   background-color: #acacac;
   text-align: center;
@@ -332,7 +377,7 @@ margin-top: 1rem;
   .zalogowany{ display: none; }
 }
 @media screen and (max-width: 1024px) {
-  .logo{ width: 20%; }
+  .logo{ width: 25%; }
 }
 @media screen and (max-width: 1320px) {
   .button3{ right: 11%; }
@@ -343,3 +388,4 @@ margin-top: 1rem;
 @media screen and (max-width: 760px) {
   .button3{ right: 15%; }
 }
+
