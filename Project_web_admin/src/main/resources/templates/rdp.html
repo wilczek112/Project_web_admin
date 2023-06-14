@@ -11,8 +11,8 @@
                 <div id="clock"></div>
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
-            <h2 class="zalogowany"> zalogowany: admin</h2>
-            <button class="btn button2">wyloguj</button>
+            <a type="submit" style="text-decoration:none" th:href="@{/panel}" class="btn button3">Panel zarządzania</a>
+            <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
         </div>
     </section>
 </head>
@@ -37,7 +37,7 @@
                 </script>
 
 <section class="srodek">
-    <div class="inner">
+    <div class="sspanel">
 
 <h1>Dostępne serwery</h1>
         <div>
@@ -49,25 +49,29 @@
         <th> Login </th>
         <th> Hasło </th>
         <th> Status </th>
+        <th> Edytuj </th>
+        <th> Usuń </th>
     </tr>
     </thead>
+
     <tbody>
     <tr th:if="${rdps.isEmpty()}">
         <td colspan="2"> Brak serwerów :( </td>
     </tr>
     <tr th:each="rdp : ${rdps}">
-        <td><span th:text="${rdp.ip_address}"> ip </span></td>
         <td><span th:text="${rdp.name}"> name </span></td>
+        <td><span th:text="${rdp.ip_address}"> ip </span></td>
         <td><span th:text="${rdp.login}"> ip </span></td>
         <td><span th:text="${rdp.password}"> name </span></td>
-        <td><span th:text="${rdp.status}"> ip </span></td>
+        <td><span th:if="${rdp.status}=='ON'" style="color: green"> ● </span>
+            <span th:if="${rdp.status}=='OFF'" style="color: red"> ● </span>
+            <span th:if="${rdp.status!='ON' and rdp.status!='OFF'}" style="color: yellow"> ● </span></td>
         <td th:if="${auth==true}"><a th:href="@{/admin/editRdp/{id}(id=${rdp.id})}">Edytuj</a></td>
         <td th:if="${auth==true}"><a th:href="@{/admin/deleteRdp/{id}(id=${rdp.id})}">Usuń</a></td>
     </tr>
     </tbody>
 </table>
         </div>
-        <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>&emsp;<button class="btn">wyloguj</button>&emsp;<button class="btn">powrót do panelu zarządzania</button>
     </div>
 </section>
 </body>
