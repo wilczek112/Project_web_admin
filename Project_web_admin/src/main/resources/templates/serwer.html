@@ -57,7 +57,9 @@
             <td><span th:text="${server.name}"> name </span></td>
             <td><span th:text="${server.login}"> login </span></td>
             <td><span th:text="${server.password}"> password </span></td>
-            <td><span th:text="${server.status}"> status </span></td>
+            <td><span th:if="${server.status}=='ON'" style="color: green"> ● </span>
+                <span th:if="${server.status}=='OFF'" style="color: red"> ● </span>
+                <span th:if="${server.status!='ON' and server.status!='OFF'}" style="color: yellow"> ● </span></td>
             <td th:if="${auth==true}"><a th:href="@{/admin/editServer/{id}(id=${server.id})}">Edytuj</a></td>
             <td th:if="${auth==true}"><a th:href="@{/admin/deleteServer/{id}(id=${server.id})}">Usuń</a></td>
         </tr>
