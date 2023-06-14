@@ -110,7 +110,6 @@ public class panelController {
         for(int i=0;i<servers.size();i++){
             if(servers.get(i).getRole_id()==2) serverUser.add(servers.get(i));
         }
-
         if(hasUserRole==true) model.addAttribute("servery",servers);
         else model.addAttribute("servery", serverUser);
         return "serwer";

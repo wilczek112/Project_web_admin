@@ -30,7 +30,8 @@ public class Status {
                 result = "OFF";
             }
         } catch (Exception e) {
-            result = "ERROR "+ e.getMessage();
+            if(e.getMessage()=="Connect timed out") result = "OFF";
+            else result = "ERROR "+ e.getMessage();
         }
         //System.out.println(url + "\t\tStatus:" + result);
         return result;

@@ -57,10 +57,23 @@
         </div>
 
         <div class="prawypanelhome">
-            <h2>Status serwer 1</h2>
-            <h2>Status serwer 2</h2>
-            <h2>Status serwer 3</h2>
-            <h2>Adres IP serwera</h2>
+            <h2>
+                <table>
+                    <tbody>
+                    <tr th:if="${servery.isEmpty()}">
+                        <td colspan="2"> Brak serwerów :( </td>
+                        </tr>
+                            <tr th:each="server : ${servery}">
+                            <td><span th:text="${server.name}"> name </span></td>
+                            <td><span th:text="${server.ip_address}"> ip </span></td>
+                            <td><span th:if="${server.status}=='ON'" style="color: green"> ● </span></td>
+                            <td><span th:if="${server.status}=='OFF'" style="color: red"> ● </span></td>
+                            <td><span th:if="${server.status}!='ON' and 'OFF'" style="color: yellow"> ● </span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </h2>
+            <h2>Adres serwera: <span th:text="${host}"></span></h2>
             <button class="btn">restart serwera</button>
         </div>
     </div>
