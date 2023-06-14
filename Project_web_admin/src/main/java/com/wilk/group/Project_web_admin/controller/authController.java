@@ -66,6 +66,7 @@ public class authController {
         else model.addAttribute("servery", serverUser);
         model.addAttribute("user", user);
         model.addAttribute("host", host);
+        model.addAttribute("auth", hasUserRole);
         return "panel";
     }
     @GetMapping(path = "/register")

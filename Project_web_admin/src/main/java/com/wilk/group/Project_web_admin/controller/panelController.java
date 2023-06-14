@@ -48,7 +48,7 @@ public class panelController {
 //        //model.addAttribute("servery", serverRepository.findAll());
 //        return serverRepository.findAll();
 //    }
-    @GetMapping(path = "/panel/routers")
+    @GetMapping(path = "/panel/router")
     public String getRouters(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         boolean hasUserRole = authentication.getAuthorities().stream()
@@ -100,7 +100,7 @@ public class panelController {
         return "database";
     }
 
-    @GetMapping(path = "/panel/servers")
+    @GetMapping(path = "/panel/server")
     public String getServers(Model model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         boolean hasUserRole = authentication.getAuthorities().stream()

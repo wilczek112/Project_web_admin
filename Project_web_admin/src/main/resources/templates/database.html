@@ -41,7 +41,30 @@
 
 
         <div class="llpanel">
-            <h1>Dostepne bazy danych</h1>
+            <h1>Dostępne bazy danych</h1>
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th> Adres ip </th>
+                    <th> Nazwa </th>
+                    <th> Login </th>
+                    <th> Hasło </th>
+                    <th> Status </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:if="${dataBases.isEmpty()}">
+                    <td colspan="2"> Brak serwerów :( </td>
+                </tr>
+                <tr th:each="Data_base : ${dataBases}">
+                    <td><span th:text="${Data_base.ip_address}"> ip </span></td>
+                    <td><span th:text="${Data_base.name}"> name </span></td>
+                    <td><span th:text="${Data_base.login}"> login </span></td>
+                    <td><span th:text="${Data_base.password}"> password </span></td>
+                    <td><span th:text="${Data_base.status}"> status </span></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
         <div class="sspanel">
             <h2>

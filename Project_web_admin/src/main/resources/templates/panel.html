@@ -49,11 +49,13 @@
     <div class="inner">
         <div class="lewypanelhome">
             <h2>Dostępne funkcje:</h2>
-            <h2><a style="text-decoration:none" th:href="@{/panel/servers}" class="btn button4">Serwery</a></h2>
-            <h2><a style="text-decoration:none" th:href="@{/panel/rdp}" class="btn button4"> Pulpity zdalne</a></h2>
-            <h2><a style="text-decoration:none" th:href="@{/panel/routers}" class="btn button4"> Routery</a></h2>
             <h2><a style="text-decoration:none" th:href="@{/panel/database}" class="btn button4">Zarządzanie bazą danych</a></h2>
-            <h2><a style="text-decoration:none" th:href="@{/admin}" class="btn button4" >Panel administracji</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/ftp}" class="btn button4">Ftp</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/rdp}" class="btn button4"> Pulpity zdalne</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/router}" class="btn button4"> Routery</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/server}" class="btn button4">Serwery</a></h2>
+            <h2><a style="text-decoration:none" th:href="@{/panel/vpn}" class="btn button4">vpn</a></h2>
+            <h2 th:if="${auth==true}"><a style="text-decoration:none" th:href="@{/admin}" class="btn button4" >Panel administracji</a></h2>
         </div>
 
         <div class="prawypanelhome">
@@ -66,9 +68,9 @@
                             <tr th:each="server : ${servery}">
                             <td><span th:text="${server.name}"> name </span></td>
                             <td><span th:text="${server.ip_address}"> ip </span></td>
-                            <td><span th:if="${server.status}=='ON'" style="color: green"> ● </span></td>
-                            <td><span th:if="${server.status}=='OFF'" style="color: red"> ● </span></td>
-                            <td><span th:if="${server.status!='ON' and server.status!='OFF'}" style="color: yellow"> ● </span></td>
+                            <td><span th:if="${server.status}=='ON'" style="color: green"> ● </span>
+                            <span th:if="${server.status}=='OFF'" style="color: red"> ● </span>
+                            <span th:if="${server.status!='ON' and server.status!='OFF'}" style="color: yellow"> ● </span></td>
                         </tr>
                     </tbody>
                 </table>
