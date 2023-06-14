@@ -209,14 +209,14 @@ public class addController {
             return "edit/edit_ftp_data";
         }
         ftp_dataRepository.save(ftp_data);
-        return "redirect:/panel/ftp_data";
+        return "redirect:/admin/ftpdata";
     }
     @GetMapping("/admin/deleteFtp_data/{id}")
     public String deleteFtp_data(@PathVariable("id") long id, Model model) {
         Ftp_data ftp_data = ftp_dataRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
         ftp_dataRepository.delete(ftp_data);
-        return "redirect:/panel/ftp_data";
+        return "redirect:/admin/ftpdata";
     }
     @GetMapping(path = "admin/addData_base")
     public String data_base(Model model) {

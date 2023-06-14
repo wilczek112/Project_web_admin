@@ -36,7 +36,7 @@ public class SpringSecurity {
                         .requestMatchers("/favicon.ico").permitAll()
                         .requestMatchers("/css/**").permitAll()
                         .requestMatchers("/images/**").permitAll()
-                        //.requestMatchers("/error/**").permitAll()
+                        .requestMatchers("/error/**").permitAll()
                         .requestMatchers("/panel/**").hasAnyRole("ADMIN", "USER")
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                 ).formLogin(
