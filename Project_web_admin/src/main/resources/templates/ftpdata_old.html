@@ -50,6 +50,8 @@
                     <th> Login </th>
                     <th> Hasło </th>
                     <th> Status </th>
+                    <th> Edytuj </th>
+                    <th> Usuń </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,7 +64,9 @@
                     <td><span th:text="${ftp.port}"> port </span></td>
                     <td><span th:text="${ftp.login}"> login </span></td>
                     <td><span th:text="${ftp.password}"> password </span></td>
-                    <td><span th:text="${ftp.status}"> status </span></td>
+                    <td><<span th:if="${ftp.status}=='ON'" style="color: green"> ● </span>
+                        <span th:if="${ftp.status}=='OFF'" style="color: red"> ● </span>
+                        <span th:if="${ftp.status!='ON' and ftp.status!='OFF'}" style="color: yellow"> ● </span></td>
                     <td th:if="${auth==true}"><a th:href="@{/admin/editFtp_data/{id}(id=${ftp.id})}">Edytuj</a></td>
                     <td th:if="${auth==true}"><a th:href="@{/admin/deleteFtp_data/{id}(id=${ftp.id})}">Usuń</a></td>
                 </tr>

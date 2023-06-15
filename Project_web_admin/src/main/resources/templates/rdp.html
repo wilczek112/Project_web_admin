@@ -66,8 +66,8 @@
         <td><span th:if="${rdp.status}=='ON'" style="color: green"> ● </span>
             <span th:if="${rdp.status}=='OFF'" style="color: red"> ● </span>
             <span th:if="${rdp.status!='ON' and rdp.status!='OFF'}" style="color: yellow"> ● </span></td>
-        <td th:if="${auth==true}"><a th:href="@{/admin/editRdp/{id}(id=${rdp.id})}">Edytuj</a></td>
-        <td th:if="${auth==true}"><a th:href="@{/admin/deleteRdp/{id}(id=${rdp.id})}">Usuń</a></td>
+        <td th:if="${auth==true}"><a th:href="@{/admin/editRdp/{id}(id=${rdp.id})}" class="btn button5" style="text-decoration:none">Edytuj</a></td>
+        <td th:if="${auth==true}"><a th:href="@{/admin/deleteRdp/{id}(id=${rdp.id})}" class="btn button5" style="text-decoration:none">Usuń</a></td>
     </tr>
     </tbody>
 </table>

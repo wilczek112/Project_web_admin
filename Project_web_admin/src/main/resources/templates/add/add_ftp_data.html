@@ -11,7 +11,7 @@
                 <div id="clock"></div>
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
-<!--            <h2 class="zalogowany"> zalogowany użytkownik: <th th:text="${user.getLogin()}"></th></h2>-->
+
             <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
 
         </div>
@@ -54,7 +54,7 @@
                 <div class="alert" th:if="${#fields.hasErrors('ip_address')}" th:errors="*{ip_address}"></div>
             </div>
             <div class="inputbox">
-                <span>Login:</span>
+                <span>Port:</span>
                 <input type="text" placeholder="Port" th:field="*{port}" />
                 <div class="alert" th:if="${#fields.hasErrors('port')}" th:errors="*{port}"></div>
             </div>

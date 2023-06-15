@@ -11,7 +11,7 @@
                 <div id="clock"></div>
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
-<!--            <h2 class="zalogowany"> zalogowany użytkownik: <th th:text="${user.getLogin()}"></th></h2>-->
+              <a type="submit" style="text-decoration:none" th:href="@{/admin}" class="btn button3">Powrót</a>
             <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
 
         </div>
@@ -75,7 +75,6 @@
                 </select>
             </div>
             <input class="btn" type="submit" value="Dodaj database"/>
-            <a class="btn" style="text-decoration:none" th:href="@{/admin}">Powrót</a>
         </form>
     </div>
 </section>

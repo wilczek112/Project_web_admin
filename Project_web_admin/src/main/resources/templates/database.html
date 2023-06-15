@@ -8,7 +8,7 @@
         <div class="header">
             <title>routery</title>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
-            <button class="btn button2">wyloguj</button>
+            <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
             <a type="submit" style="text-decoration:none" th:href="@{/panel}" class="btn button3">Panel zarządzania</a>
             <title>zarządzanie bazą danych</title>
             <h2 class="godzina">
@@ -37,36 +37,40 @@
     }
 </script>
 <section class="srodek">
-    <div class="inner">
+    <div class="sspanel">
 
 
 
             <h1>Dostępne bazy danych</h1>
-            <table class="styled-table">
-                <thead>
-                <tr>
-                    <th> Adres ip </th>
-                    <th> Nazwa </th>
-                    <th> Login </th>
-                    <th> Hasło </th>
-                    <th> Status </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr th:if="${dataBases.isEmpty()}">
-                    <td colspan="2"> Brak serwerów :( </td>
-                </tr>
-                <tr th:each="Data_base : ${dataBases}">
-                    <td><span th:text="${Data_base.ip_address}"> ip </span></td>
-                    <td><span th:text="${Data_base.name}"> name </span></td>
-                    <td><span th:text="${Data_base.login}"> login </span></td>
-                    <td><span th:text="${Data_base.password}"> password </span></td>
-                    <td><span th:text="${Data_base.status}"> status </span></td>
-                    <td th:if="${auth==true}"><a th:href="@{/admin/editData_base/{id}(id=${Data_base.id})}">Edytuj</a></td>
-                    <td th:if="${auth==true}"><a th:href="@{/admin/deleteData_base/{id}(id=${Data_base.id})}">Usuń</a></td>
-                </tr>
-                </tbody>
-            </table>
+        <table class="styled-table">
+            <thead>
+            <tr>
+                <th> Adres ip </th>
+                <th> Nazwa </th>
+                <th> Login </th>
+                <th> Hasło </th>
+                <th> Status </th>
+                <th> Edytuj </th>
+                <th> Usuń </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${dataBases.isEmpty()}">
+                <td colspan="2"> Brak serwerów :( </td>
+            </tr>
+            <tr th:each="Data_base : ${dataBases}">
+                <td><span th:text="${Data_base.ip_address}"> ip </span></td>
+                <td><span th:text="${Data_base.name}"> name </span></td>
+                <td><span th:text="${Data_base.login}"> login </span></td>
+                <td><span th:text="${Data_base.password}"> password </span></td>
+                <td><span th:if="${Data_base.status}=='ON'" style="color: green"> ● </span>
+                    <span th:if="${Data_base.status}=='OFF'" style="color: red"> ● </span>
+                    <span th:if="${Data_base.status!='ON' and Data_base.status!='OFF'}" style="color: yellow"> ● </span></td>
+                <td th:if="${auth==true}"><a th:href="@{/admin/editData_base/{id}(id=${Data_base.id})}" class="btn button5" style="text-decoration:none">Edytuj</a></td>
+                <td th:if="${auth==true}"><a th:href="@{/admin/deleteData_base/{id}(id=${Data_base.id})}" class="btn button5" style="text-decoration:none">Usuń</a></td>
+            </tr>
+            </tbody>
+        </table>
 
     </div>
 </section>

@@ -19,7 +19,7 @@
     </section>
 </head>
 <body>
-<section class="rsrodek">
+<section class="srodek">
 
         <div class="sspanel">
             <h1>Dostępne routery</h1>
@@ -47,8 +47,8 @@
                     <td><span th:if="${router.status}=='ON'" style="color: green"> ● </span>
                         <span th:if="${router.status}=='OFF'" style="color: red"> ● </span>
                         <span th:if="${router.status!='ON' and router.status!='OFF'}" style="color: yellow"> ● </span></td>
-                    <td th:if="${auth==true}"><a th:href="@{/admin/editRouter/{id}(id=${router.id})}">Edytuj</a></td>
-                    <td th:if="${auth==true}"><a th:href="@{/admin/deleteRouter/{id}(id=${router.id})}">Usuń</a></td>
+                    <td th:if="${auth==true}"><a th:href="@{/admin/editRouter/{id}(id=${router.id})}" class="btn button5" style="text-decoration:none">Edytuj</a></td>
+                    <td th:if="${auth==true}"><a th:href="@{/admin/deleteRouter/{id}(id=${router.id})}" class="btn button5" style="text-decoration:none">Usuń</a></td>
                 </tr>
                 </tbody>
             </table>
