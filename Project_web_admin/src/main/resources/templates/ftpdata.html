@@ -63,7 +63,7 @@
                 <td><span th:text="${ftp.password}"> password </span></td>
                 <td><span th:if="${ftp.status}=='ON'" style="color: green"> ● </span>
                     <span th:if="${ftp.status}=='OFF'" style="color: red"> ● </span>
-                    <span th:if="${ftp.status!='ON' and Ftp_data.status!='OFF'}" style="color: yellow"> ● </span></td>
+                    <span th:if="${ftp.status!='ON' and ftp.status!='OFF'}" style="color: yellow"> ● </span></td>
                 <td th:if="${auth==true}"><a th:href="@{/admin/editFtp_data/{id}(id=${ftp.id})}" class="btn button5" style="text-decoration:none">Edytuj</a></td>
                 <td th:if="${auth==true}"><a th:href="@{/admin/deleteFtp_data/{id}(id=${ftp.id})}" class="btn button5" style="text-decoration:none">Usuń</a></td>
             </tr>
