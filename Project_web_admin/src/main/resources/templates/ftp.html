@@ -12,6 +12,7 @@
             </h2>
             <img th:src="@{/images/PhpMyAdmin_logo_v2.png}" class="logo">
             <a th:href="@{/logout}" style="text-decoration:none" class="btn button2">wyloguj </a>
+            <a type="submit" style="text-decoration:none" th:href="@{/admin}" class="btn button3">Powrót</a>
         </div>
     </section>
 </head>
@@ -38,7 +39,7 @@
 <section class="srodek">
     <div class="inner">
         <h1>Dostępne pliki</h1>
-        <table class="styled-table">
+        <table class="styled-table styled-tableftp">
             <thead>
             <tr>
                 <th>Typ</th>
@@ -55,8 +56,6 @@
             </tr>
             </tbody>
         </table>
-
-        <button class="btn">restart</button>&emsp;<button class="btn">wyłącz</button>
     </div>
 </section>
 </body>
