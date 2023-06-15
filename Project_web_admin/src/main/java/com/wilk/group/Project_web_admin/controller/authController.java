@@ -80,7 +80,7 @@ public class authController {
         User testEmail = userRepository.findByEmail(newUser.getEmail());
         if(testLogin != null && testLogin.getLogin() != null && !testLogin.getLogin().isEmpty()){
             errors.rejectValue("login", null,
-                    "Istnieje konto o tym samym loginie");
+                    "Istnieje Email o tym samym loginie");
         }
         if(testEmail != null && testEmail.getEmail() != null && !testEmail.getEmail().isEmpty()){
             errors.rejectValue("email", null,
