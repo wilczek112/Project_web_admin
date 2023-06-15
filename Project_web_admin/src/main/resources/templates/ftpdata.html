@@ -56,14 +56,14 @@
                 <td colspan="2"> Brak serwerów ftp :( </td>
             </tr>
             <tr th:each="ftp : ${ftp_data}">
-                <td><span th:text="${Ftp_data.name}"> name </span></td>
-                <td><span th:text="${Ftp_data.ip_address}"> ip </span></td>
-                <td><span th:text="${Ftp_data.port}"> port </span></td>
-                <td><span th:text="${Ftp_data.login}"> login </span></td>
-                <td><span th:text="${Ftp_data.password}"> password </span></td>
-                <td><span th:if="${Ftp_data.status}=='ON'" style="color: green"> ● </span>
-                    <span th:if="${Ftp_data.status}=='OFF'" style="color: red"> ● </span>
-                    <span th:if="${Ftp_data.status!='ON' and Ftp_data.status!='OFF'}" style="color: yellow"> ● </span></td>
+                <td><span th:text="${ftp.name}"> name </span></td>
+                <td><span th:text="${ftp.ip_address}"> ip </span></td>
+                <td><span th:text="${ftp.port}"> port </span></td>
+                <td><span th:text="${ftp.login}"> login </span></td>
+                <td><span th:text="${ftp.password}"> password </span></td>
+                <td><span th:if="${ftp.status}=='ON'" style="color: green"> ● </span>
+                    <span th:if="${ftp.status}=='OFF'" style="color: red"> ● </span>
+                    <span th:if="${ftp.status!='ON' and Ftp_data.status!='OFF'}" style="color: yellow"> ● </span></td>
                 <td th:if="${auth==true}"><a th:href="@{/admin/editFtp_data/{id}(id=${ftp.id})}" class="btn button5" style="text-decoration:none">Edytuj</a></td>
                 <td th:if="${auth==true}"><a th:href="@{/admin/deleteFtp_data/{id}(id=${ftp.id})}" class="btn button5" style="text-decoration:none">Usuń</a></td>
             </tr>
