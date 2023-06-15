@@ -84,7 +84,7 @@ public class authController {
         }
         if(testEmail != null && testEmail.getEmail() != null && !testEmail.getEmail().isEmpty()){
             errors.rejectValue("email", null,
-                    "Istnieje konto o tym samym loginie");
+                    "Istnieje konto o tym samym email");
         }
         if (errors.hasErrors()) {
             return "register";
